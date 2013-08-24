@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.Sherlock.Light" />
+    
+    <style name="myStyle" parent="@*android:style/Widget" />
+    <style name="myStyle.BlackContentTitleText" parent="@style/myStyle">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+    <style name="myStyle.BlueBigText" parent="@style/myStyle">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff0da6df</item>
+    </style>
+    <style name="myStyle.OrangeContentTitleText" parent="@style/myStyle">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#fff7941d</item>
+    </style>
+    <style name="myStyle.GrayNormalText" parent="@style/myStyle">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff7f8081</item>
+    </style>
+
+</resources>

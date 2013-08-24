@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="list_items">
+        <item>景点查询</item>
+        <item>购买年票</item>
+        <item>攻略路线</item>
+        <item>精彩游记</item>
+        <item>巴士动态</item>
+        <item>设置</item>
+        <item>帮助</item>
+    </string-array>
+
+    <integer-array name="sight_list_item_img">
+        <item>@drawable/sight_img1</item>
+        <item>@drawable/sight_img2</item>
+        <item>@drawable/sight_img3</item>
+        <item>@drawable/sight_img4</item>
+    </integer-array>
+
+    <string-array name="sight_list_title">
+        <item>湿地公园</item>
+        <item>森林公园</item>
+        <item>湿地公园</item>
+        <item>森林公园</item>
+    </string-array>
+    <string-array name="sight_list_item_price">
+        <item>160￥</item>
+        <item>160￥</item>
+        <item>160￥</item>
+        <item>160￥</item>
+    </string-array>
+    <string-array name="sight_list_item_level">
+        <item>AAAA</item>
+        <item>AAAAA</item>
+        <item>AAA</item>
+        <item>AAAA</item>
+    </string-array>
+    <string-array name="sight_list_item_discount">
+        <item>4.5</item>
+        <item>6.5</item>
+        <item>3.5</item>
+        <item>8.5</item>
+    </string-array>
+    <string-array name="sight_list_item_distance">
+        <item>燕山立交桥二环东路</item>
+        <item>燕山立交桥二环东路</item>
+        <item>燕山立交桥二环东路</item>
+        <item>燕山立交桥二环东路</item>
+    </string-array>
+
+</resources>
