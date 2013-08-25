@@ -1,6 +1,7 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.Sherlock.Light" />
+    <style name="MyTheme" parent="Theme.Sherlock" />
+    
     
     <style name="myStyle" parent="@*android:style/Widget" />
     <style name="myStyle.BlackContentTitleText" parent="@style/myStyle">

@@ -145,8 +145,8 @@ public class LeftBottomFragment extends Fragment {
 	private void switchFragment(Fragment mContent2) {
 		if (getActivity() == null)
 			return;
-		if (getActivity() instanceof MainActivity) {
-			MainActivity ma = (MainActivity)getActivity();
+		if (getActivity() instanceof NianPiaoActivity) {
+			NianPiaoActivity ma = (NianPiaoActivity)getActivity();
 			ma.switchContent(mContent2);
 		}
 	}

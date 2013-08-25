@@ -11,6 +11,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class sightSearchFragment extends Fragment {
@@ -32,6 +34,17 @@ public class sightSearchFragment extends Fragment {
 			initValidata();
 			bindData();
 		}
+		
+		listView_sight.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 
 		return mView;
 	}
