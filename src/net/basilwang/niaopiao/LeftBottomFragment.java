@@ -10,21 +10,20 @@ import net.basilwang.nianpiao.model.ItemSettingModel;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class LeftBottomFragment extends Fragment {
+public class LeftBottomFragment extends ListFragment {
 	private View mView;
 	private Context mContext;
 	private ListView listview_common;
 	private ListView listview_more;
 	private ListView listview_setting;
-	private Fragment fragmentContent;
+	
 
 	private List<ItemComOrMoreModel> commonModels; // 常用列表的Item集合
 	private List<ItemComOrMoreModel> moreModels; // 更多列表的item集合
@@ -38,16 +37,37 @@ public class LeftBottomFragment extends Fragment {
 			initView();
 			initValidata();
 			bindData();
-			slidingMenuItemClick();
+//			slidingMenuItemClick();
+//			getActivity().getActionBar().setTitle(R.string.sight_search_title);
+			
 		}
 		return mView;
+	}
+
+	@Override
+	public void onListItemClick(ListView listView, View v, int position, long id) {
+		Fragment fragmentContent=null;
+		switch (position) {
+		case 0:
+			fragmentContent = new sightSearchFragment();
+			Log.v("onclick", "onclick happend");
+			break;
+		case 1:
+			break;
+
+		default:
+			break;
+		}
+		if (fragmentContent != null)
+			switchFragment(fragmentContent);
+		
 	}
 
 	/**
 	 * 初始化界面元素
 	 */
 	private void initView() {
-		listview_common = (ListView) mView.findViewById(R.id.listview_common);
+		listview_common = (ListView) mView.findViewById(android.R.id.list);
 		listview_more = (ListView) mView.findViewById(R.id.listview_more);
 		listview_setting = (ListView) mView.findViewById(R.id.listview_setting);
 
@@ -114,32 +134,6 @@ public class LeftBottomFragment extends Fragment {
 		listview_more.setAdapter(new CommonOrMoreAdapter(mContext, moreModels));
 		listview_setting
 				.setAdapter(new SettingAdapter(mContext, settingModels));
-	}
-
-	private void slidingMenuItemClick() {
-
-		listview_common.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				switch (position) {
-				case 0:
-					fragmentContent = new sightSearchFragment();
-					Log.v("onclick", "onclick happend");
-					break;
-				case 1:
-					break;
-
-				default:
-					break;
-				}
-				if (fragmentContent != null)
-					switchFragment(fragmentContent);
-			}
-		});
-		
-
 	}
 
 	private void switchFragment(Fragment mContent2) {

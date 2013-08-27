@@ -28,16 +28,15 @@
                 android:ems="10"
                 android:hint="请输入城市或景点关键词"
                 android:singleLine="true" />
-
-            <SearchView
+            <!-- searchView 是新加入的，3.0以前的版本不能用 -->
+            <!--
+                 <SearchView
                 android:id="@+id/searchView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null" >
-            </SearchView>
-            
+            -->
         </LinearLayout>
-        
     </RelativeLayout>
 
     <ScrollView
@@ -48,10 +47,9 @@
             android:id="@+id/sightSearchList"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:cacheColorHint="#00000000"
             android:background="@color/whilte"
+            android:cacheColorHint="#00000000"
             android:divider="@drawable/sightsearch_divider" />
-        
     </ScrollView>
 
 </LinearLayout>

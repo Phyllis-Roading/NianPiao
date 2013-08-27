@@ -3,13 +3,14 @@ package net.basilwang.niaopiao;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.widget.ImageButton;
+
+import com.actionbarsherlock.app.ActionBar;
+
 
 
 public class NianPiaoActivity extends BaseActivity {
 
 
-	private ImageButton imgbtn_top_left;
 	private Fragment mContent;
 	
 	public NianPiaoActivity() {
@@ -25,13 +26,6 @@ public class NianPiaoActivity extends BaseActivity {
 		
 //		setContentView(R.layout.activity_main);
 		initSlidingMenu(savedInstanceState);
-//		imgbtn_top_left = (ImageButton) this.findViewById(R.id.imgbtn_top_left);
-//		imgbtn_top_left.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				toggle();// 尽心SlidingMenu的打开与关闭
-//			}
-//		});
 		
 		//添加自定义的ActionBar
 //		ActionBar.LayoutParams lp = new ActionBar.LayoutParams(
@@ -44,9 +38,10 @@ public class NianPiaoActivity extends BaseActivity {
 //		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 //		actionBar.setDisplayShowCustomEnabled(true);
 		
-		getActionBar().setIcon(R.drawable.nav_left);
 		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);
-		getActionBar().setBackgroundDrawable(d);
+		ActionBar actionbar=getSupportActionBar();
+//		actionbar.setBackgroundDrawable(d);
+		actionbar.setLogo(R.drawable.btn_back);
 	}
 
 	private void initSlidingMenu(Bundle savedInstanceState) {

@@ -27,7 +27,7 @@
                      
            <!-- 常用列表 --><!-- 常用列表与更多列表使用同一个item布局 自定义适配器 -->
            <net.basilwang.nianpiao.custom.MyListView 
-               android:id="@+id/listview_common"
+               android:id="@android:id/list"
                android:layout_width="fill_parent"
                android:layout_height="wrap_content"
                android:cacheColorHint="#00000000"

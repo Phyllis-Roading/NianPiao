@@ -34,8 +34,8 @@ public class BaseActivity extends SlidingFragmentActivity {
 		sm.setFadeDegree(0.35f);
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getActionBar().setDisplayShowTitleEnabled(false);
+//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//		getActionBar().setDisplayShowTitleEnabled(true);
 //		getActionBar().setBackgroundDrawable(d)
 	}
 
@@ -54,7 +54,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.main, menu);
+//		getSupportMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 }
