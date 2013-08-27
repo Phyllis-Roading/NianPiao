@@ -9,6 +9,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -89,6 +91,13 @@ public class sightSearchFragment extends Fragment {
 		// 创建适配器并且进行绑定数据到listview中
 		listView_sight.setAdapter(new SightSearchListAdapter(mContext,
 				sightItemModels));
+	}
+
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.sight_search_main, menu);
+		super.onCreateOptionsMenu(menu, inflater);
 	}
 
 

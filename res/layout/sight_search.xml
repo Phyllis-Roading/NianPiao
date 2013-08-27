@@ -49,7 +49,8 @@
             android:layout_height="wrap_content"
             android:background="@color/whilte"
             android:cacheColorHint="#00000000"
-            android:divider="@drawable/sightsearch_divider" />
+            android:divider="@drawable/divline"
+            android:dividerHeight="1dip" />
     </ScrollView>
 
 </LinearLayout>
