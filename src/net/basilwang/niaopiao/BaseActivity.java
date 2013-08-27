@@ -3,6 +3,7 @@ package net.basilwang.niaopiao;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -45,8 +46,8 @@ public class BaseActivity extends SlidingFragmentActivity {
 		case android.R.id.home:
 			toggle();
 			return true;
-//		case R.id.github:
-//			Util.goToGitHub(this);
+//		case ActionBar.DISPLAY_USE_LOGO:
+//			toggle();
 //			return true;
 		}
 		return super.onOptionsItemSelected(item);

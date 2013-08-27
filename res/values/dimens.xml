@@ -7,6 +7,7 @@
      <dimen name="slidingmenu_offset">60dp</dimen>
     <dimen name="list_padding">10dp</dimen>
     <dimen name="shadow_width">15dp</dimen>
+    <dimen name="my_action_bar">54dip</dimen>
 
     <integer name="num_cols">1</integer>
 

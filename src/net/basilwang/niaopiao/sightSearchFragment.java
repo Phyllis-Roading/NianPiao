@@ -25,6 +25,15 @@ public class sightSearchFragment extends Fragment {
 
 
 	@Override
+	public View getView() {
+		// TODO Auto-generated method stub
+		Context np=(NianPiaoActivity)getActivity();
+		
+		return super.getView();
+	}
+
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 

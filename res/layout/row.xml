@@ -16,8 +16,8 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/title_bg"
-        android:gravity="center_vertical"
+        android:background="@drawable/titlebar_whole"
+        android:gravity="center"
         android:padding="10dp"
         android:text="Medium Text"
         android:textAppearance="@android:style/TextAppearance.Medium" />
