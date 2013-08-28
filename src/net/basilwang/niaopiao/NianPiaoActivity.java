@@ -3,7 +3,6 @@ package net.basilwang.niaopiao;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,7 +16,6 @@ public class NianPiaoActivity extends BaseActivity {
 
 
 	private Fragment mContent;
-//	private ActionBar myActionBar;
 	
 	public NianPiaoActivity() {
 		super(R.string.app_name);
@@ -60,7 +58,6 @@ public class NianPiaoActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				toggle();
 			}
 		});

@@ -38,7 +38,7 @@
         android:layout_weight="0.77" >
 
         <net.basilwang.nianpiao.custom.MyListView
-            android:id="@+id/sightSearchList"
+            android:id="@android:id/list"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/whilte"
