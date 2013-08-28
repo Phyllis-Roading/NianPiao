@@ -43,6 +43,7 @@ public class NianPiaoActivity extends BaseActivity {
 		actionBar.setDisplayShowCustomEnabled(true);
 		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);
 		actionBar.setBackgroundDrawable(d);
+		actionBar.setHomeButtonEnabled(true);
 		
 		
 //		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);

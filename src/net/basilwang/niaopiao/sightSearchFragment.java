@@ -6,8 +6,10 @@ import java.util.List;
 import net.basilwang.nianpiao.adapter.SightSearchListAdapter;
 import net.basilwang.nianpiao.model.SightListItemModel;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,10 +38,7 @@ public class sightSearchFragment extends ListFragment implements
 
 	private List<SightListItemModel> sightItemModels;
 
-	
-	
-	
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -155,15 +154,31 @@ public class sightSearchFragment extends ListFragment implements
 	@Override
 	public void onListItemClick(ListView listView, View view, int position,
 			long id) {
-		switch (position) {
+		/*switch (position) {
 		case 0:
 			Log.v("sight item0 is clicked", "湿地公园被电击了	");
 			break;
 
 		default:
 			break;
-		}
+		}*/
+//		Fragment sightItem=null;
+		SightListItemModel slim=(SightListItemModel)listView.getAdapter().getItem(position);
+		Intent intent=new Intent(mContext, SightItemActivity.class);
+		startActivity(intent);
+//		sightItem=new SightItemFragment(slim);
+//		if(sightItem!=null)
+//			switchFragment(sightItem);
+		Log.v("sight item0 is clicked", slim.getTitle().toString());
 		super.onListItemClick(listView, view, position, id);
 	}
 
+	private void switchFragment(Fragment mContent2) {
+		if (getActivity() == null)
+			return;
+		if (getActivity() instanceof NianPiaoActivity) {
+			NianPiaoActivity ma = (NianPiaoActivity)getActivity();
+			ma.switchContent(mContent2);
+		}
+	}
 }

@@ -1,12 +1,65 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="MyTheme" parent="Theme.Sherlock">
+    <style name="MyTheme" parent="Theme.Sherlock"></style>
+
+    <style name="DivideLineH">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
     </style>
-    
+
+    <style name="DivideLineV">
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="DivideLineH.White" parent="@style/DivideLineH">
+        <item name="android:background">@color/common_color_white</item>
+    </style>
+
+    <style name="DivideLineH.Gray" parent="@style/DivideLineH">
+        <item name="android:background">@color/common_color_gray</item>
+    </style>
+
+    <style name="DivideLineH.LightGray" parent="@style/DivideLineH">
+        <item name="android:background">@color/color_list_divider</item>
+    </style>
+
+    <style name="DivideLineV.Gray" parent="@style/DivideLineV">
+        <item name="android:background">@color/common_color_gray</item>
+    </style>
+
+    <style name="DivideLineH.Black" parent="@style/DivideLineH">
+        <item name="android:background">@color/common_color_black</item>
+    </style>
+
+    <style name="DivideLineV.Black" parent="@style/DivideLineV">
+        <item name="android:background">@color/common_color_black</item>
+    </style>
+
+    <style name="DivideLineH.Dashed" parent="@style/DivideLineH">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+
+    <style name="DivideLineV.Dashed" parent="@style/DivideLineV">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_marginBottom">5.0dip</item>
+    </style>
+
     <style name="myStyle" parent="@*android:style/Widget" />
 
     <style name="myStyle.BlackContentTitleText" parent="@style/myStyle">
         <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+
+    <style name="myStyle.BlackBigText" parent="@style/myStyle">
+        <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">#ff333333</item>
     </style>
 
@@ -20,19 +73,34 @@
         <item name="android:textColor">#fff7941d</item>
     </style>
 
+    <style name="myStyle.OrangeNormalText" parent="@style/myStyle">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#fff7941d</item>
+    </style>
+
     <style name="myStyle.GrayNormalText" parent="@style/myStyle">
         <item name="android:textSize">14.0dip</item>
         <item name="android:textColor">#ff7f8081</item>
     </style>
-    
+
     <style name="myStyle.WhiteHugeText" parent="@style/myStyle">
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">#ffffffff</item>
     </style>
-    
+
     <style name="myStyle.WhiteNormalText" parent="@style/myStyle">
         <item name="android:textSize">14.0dip</item>
         <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="myStyle.WhiteBigText" parent="@style/myStyle">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="myStyle.BlackNormalText" parent="@style/myStyle">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff333333</item>
     </style>
 
 </resources>
