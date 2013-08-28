@@ -6,22 +6,29 @@ import java.util.List;
 import net.basilwang.nianpiao.adapter.SightSearchListAdapter;
 import net.basilwang.nianpiao.model.SightListItemModel;
 import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.PopupWindow;
 
-public class sightSearchFragment extends Fragment {
+public class sightSearchFragment extends Fragment implements OnClickListener {
 
 	private View mView;
 	private Context mContext;
 	private ListView listView_sight;
+	private PopupMenu popMenu;
+	private PopupWindow popWindow;
 	
 	private List<SightListItemModel> sightItemModels; 
 
@@ -41,7 +48,7 @@ public class sightSearchFragment extends Fragment {
 
 		if (null == mView) {
 			mView = inflater.inflate(R.layout.sight_search, container, false);
-			listView_sight=(ListView)mView.findViewById(R.id.sightSearchList);
+			initView();
 			initValidata();
 			bindData();
 		}
@@ -58,6 +65,20 @@ public class sightSearchFragment extends Fragment {
 		});
 
 		return mView;
+	}
+
+
+	private void initView() {
+		listView_sight=(ListView)mView.findViewById(R.id.sightSearchList);
+		mView.findViewById(R.id.sight_search_bottom_left).setOnClickListener(this);
+		View popView=null;
+		popWindow=new PopupWindow(popView);
+		popWindow.setFocusable(true);
+		popWindow.setOutsideTouchable(true);
+		popWindow.update();
+		popWindow.setBackgroundDrawable(new BitmapDrawable());
+		popMenu=new PopupMenu(this.getActivity(), popView);
+		popMenu.inflate(R.menu.recommend_menu);
 	}
 
 
@@ -98,6 +119,21 @@ public class sightSearchFragment extends Fragment {
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.sight_search_main, menu);
 		super.onCreateOptionsMenu(menu, inflater);
+	}
+
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.sight_search_bottom_left:
+			popWindow.showAsDropDown(v, 0, -80);
+			Log.v("left is clicked", "wefdkewnfkremkl");
+			break;
+
+		default:
+			break;
+		}
 	}
 
 

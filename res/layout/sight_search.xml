@@ -28,20 +28,14 @@
                 android:ems="10"
                 android:hint="请输入城市或景点关键词"
                 android:singleLine="true" />
-            <!-- searchView 是新加入的，3.0以前的版本不能用 -->
-            <!--
-                 <SearchView
-                android:id="@+id/searchView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null" >
-            -->
+            
         </LinearLayout>
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="270dip"
+        android:layout_weight="0.77" >
 
         <net.basilwang.nianpiao.custom.MyListView
             android:id="@+id/sightSearchList"
@@ -52,5 +46,83 @@
             android:divider="@drawable/divline"
             android:dividerHeight="1dip" />
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divline"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/sight_search_bottom_left"
+            android:layout_width="116dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hotel_filter_btn_bg_selector"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="-5dip"
+            android:layout_marginRight="-5dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hotel_filter_recommends_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="排序"
+                android:textColor="@color/common_color_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sight_search_bottom_center"
+            android:layout_width="116dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/hotel_filter_btn_bg_normal"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="-5dip"
+            android:layout_marginRight="-5dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sight_total_selector"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部景点"
+                android:textColor="@color/common_color_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sight_search_bottom_right"
+            android:layout_width="116dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/hotel_filter_btn_bg_normal"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="-5dip"
+            android:layout_marginRight="-5dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/filter_normal"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="筛选"
+                android:textColor="@color/common_color_gray" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
