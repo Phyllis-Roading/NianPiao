@@ -1,7 +1,11 @@
 package net.basilwang.niaopiao;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
@@ -27,13 +31,28 @@ public class BaseActivity extends SlidingFragmentActivity {
 		super.onCreate(savedInstanceState);
 		setTitle(mTitleRes);
 
-		// customize the SlidingMenu
-		SlidingMenu sm = getSlidingMenu();
-		sm.setShadowWidthRes(R.dimen.shadow_width);
-		sm.setShadowDrawable(R.drawable.shadow);
-		sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-		sm.setFadeDegree(0.35f);
-		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		// customize the ActionBar
+		ActionBar.LayoutParams lp = new ActionBar.LayoutParams(
+				ActionBar.LayoutParams.MATCH_PARENT,
+				ActionBar.LayoutParams.MATCH_PARENT, Gravity.CENTER);
+		View ABTitleView=getLayoutInflater().inflate(R.layout.title_bar,
+				null);
+		ActionBar actionBar=getSupportActionBar();
+		actionBar.setCustomView(ABTitleView,lp);
+		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		actionBar.setDisplayShowCustomEnabled(true);
+		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);
+		actionBar.setBackgroundDrawable(d);
+		actionBar.setHomeButtonEnabled(true);
+		
+		View view = (View)findViewById(R.id.abs_left);
+		view.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				toggle();
+			}
+		});
 
 //		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //		getActionBar().setDisplayShowTitleEnabled(true);
