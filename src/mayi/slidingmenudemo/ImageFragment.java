@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
 import android.app.AlertDialog;
 import android.graphics.Color;
@@ -47,6 +48,7 @@ public class ImageFragment extends Fragment implements OnClickListener,OnTouchLi
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		BaseActivity.setActionbarTitle(R.string.trip_purchase);
 		imageView=inflater.inflate(R.layout.url_connection_image, container, false);
         prepare();
 		timeTaks = new ImageTimerTask();

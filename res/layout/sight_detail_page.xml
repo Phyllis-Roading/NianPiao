@@ -40,8 +40,8 @@
 
                     <ImageView
                         android:id="@+id/imgTop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="150dip"
+                        android:layout_height="150dip"
                         android:scaleType="centerCrop"
                         android:src="@drawable/add_calendar" />
 
@@ -80,7 +80,7 @@
 
                         <TextView
                             android:id="@+id/txLevel"
-                            style="@style/myStyle.BlackNormalText"
+                            style="@style/myStyle.BlueBigText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="visible" />
@@ -92,6 +92,7 @@
                             android:layout_height="wrap_content"
                             android:visibility="visible" />
 
+                        <!--
                         <TextView
                             android:id="@+id/txMarketPrice"
                             style="@style/myStyle.BlackNormalText"
@@ -105,6 +106,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="visible" />
+                        -->
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -124,7 +126,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
 
-                        <LinearLayout
+                        <!-- <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="visible" >
@@ -146,7 +148,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="起" />
-                        </LinearLayout>
+                        </LinearLayout> -->
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -180,14 +182,21 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-                <!-- <com.Qunar.view.DashedLine
+                <!--
+                     <com.Qunar.view.DashedLine
                     android:id="@+id/dlPosition"
                     style="@style/DivideLineH.Dashed"
                     android:layout_marginBottom="10.0dip"
                     android:layout_marginLeft="0.0dip"
                     android:layout_marginRight="0.0dip"
                     android:layout_marginTop="10.0dip"
-                    android:visibility="visible" /> -->
+                    android:visibility="visible" />
+                -->
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/line" />
 
                 <LinearLayout
                     android:id="@+id/llPosition"
@@ -267,15 +276,18 @@
                 android:orientation="vertical"
                 android:visibility="visible" >
 
-                <!-- <com.Qunar.view.QTabView
+                <!--
+                     <com.Qunar.view.QTabView
                     android:id="@+id/tabView"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" /> -->
+                    android:layout_height="wrap_content" />
+                -->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-    <!-- <include
+    <!--
+    <include
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1.0"
@@ -297,6 +309,7 @@
     <include
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/sight_bookbuttonl_bottom_include" /> -->
+        layout="@layout/sight_bookbuttonl_bottom_include" />
+    -->
 
 </LinearLayout>

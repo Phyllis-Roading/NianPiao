@@ -5,7 +5,9 @@
     <string name="action_settings">Settings</string>
     <string name="app_version">1.0.0</string>
     
-    <string name="sight_search_title">景点查询</string>
+    <string name="sight_search">景点查询</string>
+    <string name="trip_purchase">旅游年票</string>
+    <string name="bus_news">巴士动态</string>
     
     <string name="intro">"    "近几年，森林旅游作为现代时尚的旅游，成为当今社会大众的旅游热点，森林公园、湿地公园、自然保护区等各类自然生态区是休闲度假游的最佳胜地。山东森林旅游年票是集自然景观、人文景观、科普教育、休闲度假于一体的生活手册。</string>
     <string name="flow">购买年票->选择景点->验证->游玩->购买年票->选择景点->验证->游玩->购买年票->选择景点->验证->游玩->购买年票->选择景点->验证->游玩</string>

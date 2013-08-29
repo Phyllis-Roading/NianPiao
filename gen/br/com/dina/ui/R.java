@@ -44,7 +44,7 @@ public final class R {
 		public static final int itemCount = 0x7f040049;
 		public static final int scrollView = 0x7f040051;
 		public static final int subtitle = 0x7f040048;
-		public static final int tableView = 0x7f04007a;
+		public static final int tableView = 0x7f040077;
 		public static final int title = 0x7f040047;
 		public static final int viewsContainer = 0x7f040043;
 	}

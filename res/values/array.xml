@@ -48,5 +48,12 @@
         <item>燕山立交桥二环东路</item>
         <item>燕山立交桥二环东路</item>
     </string-array>
+    
+    <string-array name="sight_list_item_opentime">
+        <item>7:00-20:00</item>
+        <item>7:00-20:00</item>
+        <item>7:00-20:00</item>
+        <item>7:00-20:00</item>
+    </string-array>
 
 </resources>

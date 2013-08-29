@@ -1,5 +1,6 @@
 package mayi.slidingmenudemo;
 
+import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,7 +14,7 @@ public class BusFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		BaseActivity.setActionbarTitle(R.string.bus_news);
 		busFragment=inflater.inflate(R.layout.bus_fragment, container,false);
 		return busFragment;
 	}

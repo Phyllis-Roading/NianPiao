@@ -19,6 +19,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 public class BaseActivity extends SlidingFragmentActivity {
 
 	private int mTitleRes;
+	private static TextView tv_title;
 	protected ListFragment mFrag;
 
 	public BaseActivity(int titleRes) {
@@ -30,7 +31,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setTitle(mTitleRes);
-
+		
 		// customize the ActionBar
 		ActionBar.LayoutParams lp = new ActionBar.LayoutParams(
 				ActionBar.LayoutParams.MATCH_PARENT,
@@ -53,9 +54,9 @@ public class BaseActivity extends SlidingFragmentActivity {
 				toggle();
 			}
 		});
-		
-		TextView mtv=(TextView)findViewById(R.id.abs_title);
-		mtv.setText("sdcdsvdfs");
+		tv_title=(TextView)findViewById(R.id.abs_title);
+		setActionbarTitle(mTitleRes);
+//		mtv.setText("sdcdsvdfs");
 
 //		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //		getActionBar().setDisplayShowTitleEnabled(true);
@@ -79,5 +80,13 @@ public class BaseActivity extends SlidingFragmentActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 //		getSupportMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	public static void setActionbarTitle(int mTitleRes){
+		tv_title.setText(mTitleRes);
+	}
+	
+	public static void setActionbarTitle(String mTitleRes){
+		tv_title.setText(mTitleRes);
 	}
 }

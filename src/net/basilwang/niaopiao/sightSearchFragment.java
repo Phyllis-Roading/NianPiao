@@ -38,10 +38,10 @@ public class sightSearchFragment extends ListFragment implements
 
 	private List<SightListItemModel> sightItemModels;
 
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		BaseActivity.setActionbarTitle(R.string.sight_search);
 		if (null == mView) {
 			mView = inflater.inflate(R.layout.sight_search, container, false);
 			initView();
@@ -53,7 +53,6 @@ public class sightSearchFragment extends ListFragment implements
 
 	private void initView() {
 		listView_sight = (ListView) mView.findViewById(android.R.id.list);
-		
 		mView.findViewById(R.id.sight_search_bottom_left).setOnClickListener(
 				this);
 		layout = (LinearLayout) LayoutInflater.from(getActivity()).inflate(
@@ -107,11 +106,14 @@ public class sightSearchFragment extends ListFragment implements
 				.getStringArray(R.array.sight_list_item_discount);
 		String[] sight_list_item_distance = mContext.getResources()
 				.getStringArray(R.array.sight_list_item_distance);
+		String[] sight_list_item_opentime = mContext.getResources()
+				.getStringArray(R.array.sight_list_item_opentime);
 		for (int i = 0; i < sight_list_item_img.length; i++) {
 			SightListItemModel ListItem = new SightListItemModel(
 					sight_list_item_img[i], sight_list_title[i],
 					sight_list_item_level[i], sight_list_item_price[i],
-					sight_list_item_discount[i], sight_list_item_distance[i]);
+					sight_list_item_discount[i], sight_list_item_distance[i],
+					sight_list_item_opentime[i]);
 			sightItemModels.add(ListItem);
 		}
 	}
@@ -148,27 +150,26 @@ public class sightSearchFragment extends ListFragment implements
 	}
 
 	private void swapBackground() {
-		
+
 	}
 
 	@Override
 	public void onListItemClick(ListView listView, View view, int position,
 			long id) {
-		/*switch (position) {
-		case 0:
-			Log.v("sight item0 is clicked", "湿地公园被电击了	");
-			break;
-
-		default:
-			break;
-		}*/
-//		Fragment sightItem=null;
-		SightListItemModel slim=(SightListItemModel)listView.getAdapter().getItem(position);
-		Intent intent=new Intent(mContext, SightItemActivity.class);
-		startActivity(intent);
-//		sightItem=new SightItemFragment(slim);
-//		if(sightItem!=null)
-//			switchFragment(sightItem);
+		/*
+		 * switch (position) { case 0: Log.v("sight item0 is clicked",
+		 * "湿地公园被电击了	"); break;
+		 * 
+		 * default: break; }
+		 */
+		Fragment sightItem = null;
+		SightListItemModel slim = (SightListItemModel) listView.getAdapter()
+				.getItem(position);
+		// Intent intent=new Intent(mContext, SightItemActivity.class);
+		// startActivity(intent);
+		sightItem = new SightItemFragment(slim);
+		if (sightItem != null)
+			switchFragment(sightItem);
 		Log.v("sight item0 is clicked", slim.getTitle().toString());
 		super.onListItemClick(listView, view, position, id);
 	}
@@ -177,7 +178,7 @@ public class sightSearchFragment extends ListFragment implements
 		if (getActivity() == null)
 			return;
 		if (getActivity() instanceof NianPiaoActivity) {
-			NianPiaoActivity ma = (NianPiaoActivity)getActivity();
+			NianPiaoActivity ma = (NianPiaoActivity) getActivity();
 			ma.switchContent(mContent2);
 		}
 	}
