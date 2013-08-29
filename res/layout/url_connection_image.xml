@@ -26,7 +26,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:fadingEdge="none"
-                    android:spacing="1dip"
+                    android:spacing="1dp"
                     android:unselectedAlpha="1" >
                 </mayi.slidingmenudemo.GuideGallery>
 
