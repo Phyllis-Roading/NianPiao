@@ -1,12 +1,10 @@
 package net.basilwang.niaopiao;
 
 import mayi.slidingmenudemo.SlideMenuFragment;
-
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.Window;
+
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 public class NianPiaoActivity extends BaseActivity {
 
