@@ -7,6 +7,12 @@
     
     <string name="sight_search_title">景点查询</string>
     
+    <string name="intro">"    "近几年，森林旅游作为现代时尚的旅游，成为当今社会大众的旅游热点，森林公园、湿地公园、自然保护区等各类自然生态区是休闲度假游的最佳胜地。山东森林旅游年票是集自然景观、人文景观、科普教育、休闲度假于一体的生活手册。</string>
+    <string name="flow">购买年票->选择景点->验证->游玩->购买年票->选择景点->验证->游玩->购买年票->选择景点->验证->游玩->购买年票->选择景点->验证->游玩</string>
+    <string name="question">Q：如何使用年票"\n"A：不知道"\n\n"Q：如何购买年票"\n"A：不知道"\n\n"Q：如何使用年票"\n"A：不知道"\n\n"Q：如何购买年票"\n"A：不知道"\n\n"Q：如何使用年票"\n"A：不知道"\n\n"Q：如何购买年票"\n"A：不知道"</string>
+    <string name="partner">济宁地区：联系人：陈老师   电话：0537-2723855  手机：13371234855  地址：济宁市红星中路3号"\n""\n"聊城地区：  联系人：商老师   电话：13210964810  地址：聊城 ·茌平县实验小学老校对过新鑫书店"\n""\n"泰安地区：电话：0538—8888852  QQ:1336886296  地址： 泰安市东岳大街77号银座城市广场1栋2单元16楼</string>
+    <string name="title_activity_bus_fragment">BusFragment</string>
+    
     <string name="left_bottom_commom">常用</string>
     <string name="left_bottom_more">更多</string>
     <string name="search">搜索</string>

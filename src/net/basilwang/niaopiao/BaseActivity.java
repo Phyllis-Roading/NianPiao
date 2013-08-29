@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
@@ -29,6 +31,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setTitle(mTitleRes);
 
 		// customize the ActionBar
@@ -53,6 +56,9 @@ public class BaseActivity extends SlidingFragmentActivity {
 				toggle();
 			}
 		});
+		
+		TextView mtv=(TextView)findViewById(R.id.abs_title);
+		mtv.setText("sdcdsvdfs");
 
 //		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //		getActionBar().setDisplayShowTitleEnabled(true);

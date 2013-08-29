@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="MyTheme" parent="Theme.Sherlock"></style>
+    <style name="MyTheme" parent="Theme.Sherlock.Light.DarkActionBar"></style>
 
     <style name="DivideLineH">
         <item name="android:layout_width">fill_parent</item>
@@ -60,6 +60,11 @@
 
     <style name="myStyle.BlackBigText" parent="@style/myStyle">
         <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+    
+    <style name="myStyle.BlackSmallText" parent="@style/myStyle">
+        <item name="android:textSize">12.0dip</item>
         <item name="android:textColor">#ff333333</item>
     </style>
 

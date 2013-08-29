@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_buy_dialog"
+    android:padding="5dp"
+    android:id="@+id/buy_dialog"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="fill_parent"
+            style="@style/myStyle.BlackNormalText"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="姓   名："/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/name"
+            android:hint="请输入姓名"/>"
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="fill_parent"
+            style="@style/myStyle.BlackNormalText"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="手   机："/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/phone"
+            />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="fill_parent"
+            style="@style/myStyle.BlackNormalText"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="邮   箱："/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/email"
+            />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="fill_parent"
+            style="@style/myStyle.BlackNormalText"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="寄送地址："/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/address"
+            android:minLines="3"
+            android:hint="请输入有效地址"
+            />
+    </LinearLayout>"
+
+</LinearLayout>

@@ -1,9 +1,12 @@
 package net.basilwang.niaopiao;
 
+import mayi.slidingmenudemo.SlideMenuFragment;
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Window;
 
 public class NianPiaoActivity extends BaseActivity {
 
@@ -16,7 +19,6 @@ public class NianPiaoActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		// customize the SlidingMenu
 		SlidingMenu sm = getSlidingMenu();
@@ -36,14 +38,14 @@ public class NianPiaoActivity extends BaseActivity {
 		if (mContent == null)
 			mContent = new sightSearchFragment();
 
-		// ÉèÖÃÄÚÈÝÊÔÍ¼
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 		setContentView(R.layout.content_frame);
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.content_frame, mContent).commit();
-		// ÉèÖÃ»¬¶¯²Ëµ¥µÄÊÓÍ¼
+		// ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 		setBehindContentView(R.layout.menu_frame);
 		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.menu_frame, new LeftBottomFragment()).commit();
+				.replace(R.id.menu_frame, new SlideMenuFragment()).commit();
 
 	}
 

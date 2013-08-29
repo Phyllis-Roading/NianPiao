@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="list_items">
+    <string-array name="menu_items">
         <item>景点查询</item>
         <item>购买年票</item>
         <item>攻略路线</item>
