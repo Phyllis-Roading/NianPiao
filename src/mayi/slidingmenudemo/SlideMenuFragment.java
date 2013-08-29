@@ -1,5 +1,6 @@
 package mayi.slidingmenudemo;
 
+import tk.sdxuyan.AMap.RouteFragment;
 import net.basilwang.niaopiao.NianPiaoActivity;
 import net.basilwang.niaopiao.R;
 import net.basilwang.niaopiao.sightSearchFragment;
@@ -10,17 +11,18 @@ import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class SlideMenuFragment extends ListFragment {
+public class SlideMenuFragment extends ListFragment implements OnClickListener{
 
 	private View listView;
-	private ImageView img_icon_top;
-	private int newBusMessages=3;//鏂扮殑鍔ㄦ�淇℃伅鏉℃暟锛岃仈缃戣幏鍙�	
+	private View img_icon_top;
+	private int newBusMessages=3;//联网获取新消息的条数	
 	private int[] messageNumImage={0,R.drawable.message1,
 			R.drawable.message2,R.drawable.message3,
 			R.drawable.message4,R.drawable.message5,
@@ -32,19 +34,8 @@ public class SlideMenuFragment extends ListFragment {
 	}
 
 	public void prepare(){
-		img_icon_top=(ImageView)listView.findViewById(R.id.img_icon_top);
-		img_icon_top.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-//				Log.v("view","click");
-//				Fragment newContent = null;
-////				newContent = new ColorFragment(R.color.blue);
-//				if (newContent != null)
-//					switchFragment(newContent);
-			}
-		});
+		img_icon_top=(View)listView.findViewById(R.id.margin);
+//		img_icon_top.setOnClickListener(this);
 	}
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -112,7 +103,6 @@ public class SlideMenuFragment extends ListFragment {
 			ImageView message_icon = (ImageView) convertView
 					.findViewById(R.id.new_message_icon);
 			message_icon.setImageResource(getItem(position).messageRes);
-
 			return convertView;
 		}
 
@@ -126,16 +116,17 @@ public class SlideMenuFragment extends ListFragment {
 			newContent = new sightSearchFragment();
 			break;
 		case 1:
-			newContent = new ImageFragment();
+			newContent = new PurchaseFragment();
 			break;
 		case 2:
+			newContent=new RouteFragment();
 			break;
 		case 3:
 			break;
 		case 4:
 			newContent = new BusFragment();
 			newBusMessages=0;
-			onActivityCreated(null);//鐐瑰嚮鍚庯紝鏂板姩鎬佹潯鏁颁负0锛�			
+			onActivityCreated(null);//点击后刷新消息数量		
 			break;
 		}
 		if (newContent != null)
@@ -152,5 +143,8 @@ public class SlideMenuFragment extends ListFragment {
 		}
 	}
 
-
+	@Override
+	public void onClick(View v) {
+		Log.v("icon", "click");
+	}
 }

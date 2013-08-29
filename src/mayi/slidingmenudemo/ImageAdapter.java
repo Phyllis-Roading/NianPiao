@@ -24,7 +24,7 @@ public class ImageAdapter extends BaseAdapter{
     Uri uri;
     Intent intent;
     ImageView imageView;
-    ImageFragment imageFragment=new ImageFragment();
+    PurchaseFragment imageFragment=new PurchaseFragment();
    public static Integer[] imgs = {
  			R.drawable.one,
  			R.drawable.two,
@@ -88,7 +88,7 @@ public class ImageAdapter extends BaseAdapter{
         
     }  
 	public void changePointView(int cur) {
-		LinearLayout pointLinear=(LinearLayout)ImageFragment.imageView.findViewById(R.id.gallery_point_linear);
+		LinearLayout pointLinear=(LinearLayout)PurchaseFragment.imageView.findViewById(R.id.gallery_point_linear);
 		pointLinear.getBackground().setAlpha(0);
 		View view = pointLinear.getChildAt(positon);
 		View curView = pointLinear.getChildAt(cur);

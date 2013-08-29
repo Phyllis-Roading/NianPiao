@@ -21,5 +21,7 @@
     <string name="left_bottom_recommend">推荐应用</string>
     <string name="left_bottom_app">我的应用</string>
     <string name="left_bottom_setting">操作</string>
+    
+    <string name="map_not_ready">SupportMapFragment初始化失败</string>
 
 </resources>
