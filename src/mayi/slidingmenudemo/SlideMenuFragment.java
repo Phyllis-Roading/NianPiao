@@ -115,7 +115,7 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 			newContent = new sightSearchFragment();
 			break;
 		case 1:
-			newContent = new ImageFragment();
+			newContent = new PurchaseFragment();
 			break;
 		case 2:
 			break;

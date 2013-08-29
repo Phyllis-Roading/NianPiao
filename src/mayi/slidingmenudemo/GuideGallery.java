@@ -9,7 +9,7 @@ import android.widget.Gallery;
 
 public class GuideGallery extends Gallery {
 
-	private ImageFragment m_iact;
+	private PurchaseFragment m_iact;
 	public GuideGallery(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
@@ -25,7 +25,7 @@ public class GuideGallery extends Gallery {
 		super(context, attrs, defStyle);
 	}
 
-	public void setImageActivity(ImageFragment iact){
+	public void setImageActivity(PurchaseFragment iact){
 		m_iact = iact;
 	}
 	

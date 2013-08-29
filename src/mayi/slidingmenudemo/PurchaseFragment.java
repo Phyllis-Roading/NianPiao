@@ -25,7 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class ImageFragment extends Fragment implements OnClickListener,OnTouchListener{
+public class PurchaseFragment extends Fragment implements OnClickListener,OnTouchListener{
 
 	public List<String> urls;
 	public GuideGallery images_ga;
@@ -50,7 +50,7 @@ public class ImageFragment extends Fragment implements OnClickListener,OnTouchLi
 		imageView=inflater.inflate(R.layout.url_connection_image, container, false);
         prepare();
 		timeTaks = new ImageTimerTask();
-		// �?000�?��每隔5000执行timeTaks
+		// �?000�?��每隔5000执行timeTaks
 		autoGallery.scheduleAtFixedRate(timeTaks, 3000, 3000);
 		timeThread = new Thread() {
 			public void run() {
@@ -93,7 +93,7 @@ public class ImageFragment extends Fragment implements OnClickListener,OnTouchLi
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			if (msg.what == touchEventId) {
-//				if (lastY != scrollView.getScrollY())//左右移动不变，但页面�?��
+//				if (lastY != scrollView.getScrollY())//左右移动不变，但页面�?��
 				{
 					handler.sendMessageDelayed(
 							handler.obtainMessage(touchEventId, scrollView), 5);
@@ -128,9 +128,9 @@ public class ImageFragment extends Fragment implements OnClickListener,OnTouchLi
 		LayoutInflater inflater = this.getActivity().getLayoutInflater();
 	    View layout = inflater.inflate(R.layout.buy_dialog,
 	     (ViewGroup) imageView.findViewById(R.id.buy_dialog));
-	    new AlertDialog.Builder(this.getActivity()).setTitle("��Ʊ����").setView(layout)
-	     .setPositiveButton("�ύ", null)
-	     .setNegativeButton("ȡ��", null).show();
+	    new AlertDialog.Builder(this.getActivity()).setTitle("��Ʊ����").setView(layout)
+	     .setPositiveButton("�ύ", null)
+	     .setNegativeButton("ȡ��", null).show();
 	}
 	
 	@Override
