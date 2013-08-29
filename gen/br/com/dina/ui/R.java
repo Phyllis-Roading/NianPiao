@@ -13,14 +13,14 @@ public final class R {
 		public static final int image = 0x7f010072;
 	}
 	public static final class color {
-		public static final int base_end_color_default = 0x7f060008;
-		public static final int base_end_color_pressed = 0x7f06000a;
-		public static final int base_start_color_default = 0x7f060007;
-		public static final int base_start_color_pressed = 0x7f060009;
-		public static final int rounded_container_border = 0x7f060006;
-		public static final int text_color_default = 0x7f06000b;
-		public static final int text_color_pressed = 0x7f06000c;
-		public static final int text_color_selector = 0x7f06002e;
+		public static final int base_end_color_default = 0x7f070008;
+		public static final int base_end_color_pressed = 0x7f07000a;
+		public static final int base_start_color_default = 0x7f070007;
+		public static final int base_start_color_pressed = 0x7f070009;
+		public static final int rounded_container_border = 0x7f070006;
+		public static final int text_color_default = 0x7f07000b;
+		public static final int text_color_pressed = 0x7f07000c;
+		public static final int text_color_selector = 0x7f07002e;
 	}
 	public static final class drawable {
 		public static final int background_view_rounded_bottom = 0x7f020073;
@@ -37,40 +37,40 @@ public final class R {
 		public static final int icon = 0x7f02009e;
 	}
 	public static final class id {
-		public static final int buttonsContainer = 0x7f040044;
-		public static final int chevron = 0x7f04004a;
-		public static final int image = 0x7f040046;
-		public static final int itemContainer = 0x7f040045;
-		public static final int itemCount = 0x7f040049;
-		public static final int scrollView = 0x7f040051;
-		public static final int subtitle = 0x7f040048;
-		public static final int tableView = 0x7f04007a;
-		public static final int title = 0x7f040047;
-		public static final int viewsContainer = 0x7f040043;
+		public static final int buttonsContainer = 0x7f05004a;
+		public static final int chevron = 0x7f050050;
+		public static final int image = 0x7f05004c;
+		public static final int itemContainer = 0x7f05004b;
+		public static final int itemCount = 0x7f05004f;
+		public static final int scrollView = 0x7f050057;
+		public static final int subtitle = 0x7f05004e;
+		public static final int tableView = 0x7f050080;
+		public static final int title = 0x7f05004d;
+		public static final int viewsContainer = 0x7f050049;
 	}
 	public static final class layout {
-		public static final int list_container = 0x7f03001d;
-		public static final int list_item_bottom = 0x7f03001e;
-		public static final int list_item_middle = 0x7f03001f;
-		public static final int list_item_single = 0x7f030020;
-		public static final int list_item_top = 0x7f030021;
-		public static final int uitableview_activity = 0x7f03002d;
+		public static final int list_container = 0x7f030020;
+		public static final int list_item_bottom = 0x7f030021;
+		public static final int list_item_middle = 0x7f030022;
+		public static final int list_item_single = 0x7f030023;
+		public static final int list_item_top = 0x7f030024;
+		public static final int uitableview_activity = 0x7f030030;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f09000e;
-		public static final int hello = 0x7f09000d;
+		public static final int app_name = 0x7f0a000e;
+		public static final int hello = 0x7f0a000d;
 	}
 	public static final class style {
-		public static final int UITableView = 0x7f0a0059;
-		public static final int content_page_large_count_text = 0x7f0a0062;
-		public static final int content_page_large_text = 0x7f0a0060;
-		public static final int content_page_small_text = 0x7f0a0061;
-		public static final int list_container = 0x7f0a005a;
-		public static final int list_item_bottom = 0x7f0a005d;
-		public static final int list_item_chevron = 0x7f0a005f;
-		public static final int list_item_middle = 0x7f0a005c;
-		public static final int list_item_single = 0x7f0a005e;
-		public static final int list_item_top = 0x7f0a005b;
+		public static final int UITableView = 0x7f0b0059;
+		public static final int content_page_large_count_text = 0x7f0b0062;
+		public static final int content_page_large_text = 0x7f0b0060;
+		public static final int content_page_small_text = 0x7f0b0061;
+		public static final int list_container = 0x7f0b005a;
+		public static final int list_item_bottom = 0x7f0b005d;
+		public static final int list_item_chevron = 0x7f0b005f;
+		public static final int list_item_middle = 0x7f0b005c;
+		public static final int list_item_single = 0x7f0b005e;
+		public static final int list_item_top = 0x7f0b005b;
 	}
 	public static final class styleable {
 		public static final int[] UIButton = { 0x7f010070, 0x7f010071, 0x7f010072 };

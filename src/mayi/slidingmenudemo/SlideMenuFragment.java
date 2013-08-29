@@ -1,5 +1,6 @@
 package mayi.slidingmenudemo;
 
+import tk.sdxuyan.AMap.RouteFragment;
 import net.basilwang.niaopiao.NianPiaoActivity;
 import net.basilwang.niaopiao.R;
 import net.basilwang.niaopiao.sightSearchFragment;
@@ -118,6 +119,7 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 			newContent = new PurchaseFragment();
 			break;
 		case 2:
+			newContent=new RouteFragment();
 			break;
 		case 3:
 			break;
