@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/mine_top" />
+        <include layout="@layout/mine_middle_button"/>
+
+        
+<!--     
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_gravity="center"
+            android:layout_margin="10dp" >
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/strategy"
+                    style="@style/mine"
+                    android:background="@drawable/selector" />
+
+                <Button
+                    android:id="@+id/gone"
+                    style="@style/mine"
+                    android:background="@drawable/selector_coupon" />
+
+                <Button
+                    android:id="@+id/want"
+                    style="@style/mine"
+                    android:background="@drawable/selector_money" />
+
+                <Button
+                    android:id="@+id/friend"
+                    style="@style/mine"
+                    android:background="@drawable/selector_partner" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/mine"
+                    android:text="攻略" />
+
+                <TextView
+                    style="@style/mine"
+                    android:text="去过" />
+
+                <TextView
+                    style="@style/mine"
+                    android:text="想去" />
+
+                <TextView
+                    style="@style/mine"
+                    android:text="粉丝" />
+            </TableRow>
+        </TableLayout>
+ -->   
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <br.com.dina.ui.widget.UITableView
+                android:id="@+id/mineitem_view"
+                style="@style/UITableView" >
+            </br.com.dina.ui.widget.UITableView>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,5 +1,6 @@
 package mayi.slidingmenudemo;
 
+import mine.fragment.MineFragment;
 import net.basilwang.niaopiao.NianPiaoActivity;
 import net.basilwang.niaopiao.R;
 import net.basilwang.niaopiao.sightSearchFragment;
@@ -20,7 +21,7 @@ public class SlideMenuFragment extends ListFragment {
 
 	private View listView;
 	private ImageView img_icon_top;
-	private int newBusMessages=3;//鏂扮殑鍔ㄦ�淇℃伅鏉℃暟锛岃仈缃戣幏鍙�	
+	private int newBusMessages=3;//閺傛壆娈戦崝銊︼拷娣団剝浼呴弶鈩冩殶閿涘矁浠堢純鎴ｅ箯閸欙拷	
 	private int[] messageNumImage={0,R.drawable.message1,
 			R.drawable.message2,R.drawable.message3,
 			R.drawable.message4,R.drawable.message5,
@@ -135,7 +136,12 @@ public class SlideMenuFragment extends ListFragment {
 		case 4:
 			newContent = new BusFragment();
 			newBusMessages=0;
-			onActivityCreated(null);//鐐瑰嚮鍚庯紝鏂板姩鎬佹潯鏁颁负0锛�			
+			onActivityCreated(null);//閻愮懓鍤崥搴礉閺傛澘濮╅幀浣规蒋閺侀璐�閿涳拷			
+			break;
+		case 5:
+			break;
+		case 6:
+			newContent=new MineFragment();
 			break;
 		}
 		if (newContent != null)

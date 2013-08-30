@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout style="@style/mine_middle_layout" >
+
+        <Button
+            android:id="@+id/strategy"
+            style="@style/mine"
+            android:background="@drawable/selector" />
+
+        <TextView
+            style="@style/mine"
+            android:text="攻略" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/mine_middle_layout" >
+
+        <Button
+            android:id="@+id/gone"
+            style="@style/mine"
+            android:background="@drawable/selector_coupon" />
+
+        <TextView
+            style="@style/mine"
+            android:text="去过" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/mine_middle_layout" >
+
+        <Button
+            android:id="@+id/want"
+            style="@style/mine"
+            android:background="@drawable/selector_money" />
+
+        <TextView
+            style="@style/mine"
+            android:text="想去" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/mine_middle_layout" >
+
+        <Button
+            android:id="@+id/friend"
+            style="@style/mine"
+            android:background="@drawable/selector_partner" />
+
+        <TextView
+            style="@style/mine"
+            android:text="粉丝" />
+    </LinearLayout>
+
+</LinearLayout>

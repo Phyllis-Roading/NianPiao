@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.basilwang.niaopiao"
+<manifest package="net.basilwang.niaopiao"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -22,7 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="SightItemActivity"></activity>
+        <activity android:name="net.basilwang.niaopiao.SightItemActivity" >
+        </activity>
+        <activity android:name="mine.fragment.HistoryActivity" >
+        </activity>
+        <activity android:name="mine.fragment.CollectActivity" >
+        </activity>
+        <activity
+            android:name="mine.fragment.InformationActivity"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity android:name="mine.fragment.IconUploadActivity"></activity>
     </application>
 
 </manifest>

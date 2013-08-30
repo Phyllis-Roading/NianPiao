@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ui="http://schemas.android.com/apk/res/net.basilwang.niaopiao"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+           
+            <br.com.dina.ui.widget.UIButton
+                android:id="@+id/mine_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dip"
+                ui:dinatitle="更改头像"
+                ui:image="@drawable/mine_avatar_default" />
+
+            <br.com.dina.ui.widget.UITableView
+                android:id="@+id/mine_information"
+                style="@style/UITableView" >
+            </br.com.dina.ui.widget.UITableView>
+
+            <br.com.dina.ui.widget.UIButton
+                android:id="@+id/mine_more"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dip"
+                ui:dinatitle="更多" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

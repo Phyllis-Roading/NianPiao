@@ -37,24 +37,24 @@ public final class R {
 		public static final int icon = 0x7f02009d;
 	}
 	public static final class id {
-		public static final int buttonsContainer = 0x7f040044;
-		public static final int chevron = 0x7f04004a;
-		public static final int image = 0x7f040046;
-		public static final int itemContainer = 0x7f040045;
-		public static final int itemCount = 0x7f040049;
-		public static final int scrollView = 0x7f040051;
-		public static final int subtitle = 0x7f040048;
-		public static final int tableView = 0x7f04007a;
-		public static final int title = 0x7f040047;
-		public static final int viewsContainer = 0x7f040043;
+		public static final int buttonsContainer = 0x7f040049;
+		public static final int chevron = 0x7f04004f;
+		public static final int image = 0x7f04004b;
+		public static final int itemContainer = 0x7f04004a;
+		public static final int itemCount = 0x7f04004e;
+		public static final int scrollView = 0x7f040067;
+		public static final int subtitle = 0x7f04004d;
+		public static final int tableView = 0x7f04008f;
+		public static final int title = 0x7f04004c;
+		public static final int viewsContainer = 0x7f040048;
 	}
 	public static final class layout {
-		public static final int list_container = 0x7f03001d;
-		public static final int list_item_bottom = 0x7f03001e;
-		public static final int list_item_middle = 0x7f03001f;
-		public static final int list_item_single = 0x7f030020;
-		public static final int list_item_top = 0x7f030021;
-		public static final int uitableview_activity = 0x7f03002d;
+		public static final int list_container = 0x7f030020;
+		public static final int list_item_bottom = 0x7f030021;
+		public static final int list_item_middle = 0x7f030022;
+		public static final int list_item_single = 0x7f030023;
+		public static final int list_item_top = 0x7f030024;
+		public static final int uitableview_activity = 0x7f030037;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f09000e;
