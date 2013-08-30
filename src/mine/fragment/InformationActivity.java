@@ -3,6 +3,7 @@ package mine.fragment;
 import br.com.dina.ui.widget.UIButton;
 import br.com.dina.ui.widget.UIButton.ClickListener;
 import br.com.dina.ui.widget.UITableView;
+import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
 import net.basilwang.niaopiao.R.layout;
 import net.basilwang.niaopiao.R.menu;
@@ -27,6 +28,9 @@ public class InformationActivity extends TestActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mine_information);
+		BaseActivity.setActionbarTitle(R.string.mine_edit);
+		BaseActivity.setActionbarNavVisibility(View.GONE);
+		
 		icon = (UIButton) findViewById(R.id.mine_icon);
 		more = (UIButton) findViewById(R.id.mine_more);
 		information = (UITableView) findViewById(R.id.mine_information);

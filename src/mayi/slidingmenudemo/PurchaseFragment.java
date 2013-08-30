@@ -49,6 +49,7 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		BaseActivity.setActionbarTitle(R.string.trip_purchase);
+		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
 		imageView=inflater.inflate(R.layout.url_connection_image, container, false);
         prepare();
 		timeTaks = new ImageTimerTask();

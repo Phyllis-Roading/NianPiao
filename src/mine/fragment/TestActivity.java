@@ -39,7 +39,7 @@ public class TestActivity extends SherlockActivity{
 		actionBar.setBackgroundDrawable(d);
 		actionBar.setHomeButtonEnabled(true);
 		
-		View view = (View)findViewById(R.id.abs_left);
+		View view = (View)findViewById(R.id.abs_left_nav);
 		view.setOnClickListener(new OnClickListener() {
 			
 			@Override

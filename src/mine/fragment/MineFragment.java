@@ -1,5 +1,6 @@
 package mine.fragment;
 
+import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
@@ -31,7 +32,9 @@ public class MineFragment extends Fragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		BaseActivity.setActionbarTitle(R.string.mine_title);
+		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
+		
 		mineView = inflater.inflate(R.layout.mine, container, false);
 		initwidget();
 		edit.setOnClickListener(this);

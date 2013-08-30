@@ -33,6 +33,8 @@ public class HistoryActivity extends TestActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mine_history);
+		BaseActivity.setActionbarTitle(R.string.mine_history);
+		BaseActivity.setActionbarNavVisibility(View.GONE);
 		// setBehindContentView(R.layout.mine);
 		listView = (MyListView) findViewById(R.id.listview_history);
 		adapter = new HistoryAdapter(this);

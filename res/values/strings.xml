@@ -24,5 +24,9 @@
     <string name="left_bottom_setting">操作</string>
     
     <string name="map_not_ready">SupportMapFragment初始化失败</string>
+    <string name="title_activity_information">informationActivity</string>
+    <string name="mine_title">我的行囊</string>
+    <string name="mine_history">浏览历史</string>
+    <string name="mine_edit">编辑资料</string>
 
 </resources>
