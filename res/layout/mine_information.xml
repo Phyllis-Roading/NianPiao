@@ -3,6 +3,7 @@
     xmlns:ui="http://schemas.android.com/apk/res/net.basilwang.niaopiao"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#DDDDDD"
     android:orientation="vertical" >
 
     <ScrollView
@@ -18,7 +19,7 @@
             <br.com.dina.ui.widget.UIButton
                 android:id="@+id/mine_icon"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="85dp"
                 android:padding="10dip"
                 ui:dinatitle="更改头像"
                 ui:image="@drawable/mine_avatar_default" />
@@ -31,7 +32,7 @@
             <br.com.dina.ui.widget.UIButton
                 android:id="@+id/mine_more"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="85dp"
                 android:padding="10dip"
                 ui:dinatitle="更多" />
         </LinearLayout>

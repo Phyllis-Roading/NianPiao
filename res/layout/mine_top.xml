@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/mine_top_color"
+    android:layout_height="130dp"
+    android:background="@drawable/mine_top_bg"
     android:orientation="horizontal"
     android:padding="20dp"
     android:paddingTop="25dp"
