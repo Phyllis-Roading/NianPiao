@@ -1,6 +1,8 @@
 package mayi.slidingmenudemo;
 
 import tk.sdxuyan.AMap.RouteFragment;
+import mine.fragment.MineFragment;
+
 import net.basilwang.niaopiao.NianPiaoActivity;
 import net.basilwang.niaopiao.R;
 import net.basilwang.niaopiao.sightSearchFragment;
@@ -22,7 +24,7 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 
 	private View listView;
 	private View img_icon_top;
-	private int newBusMessages=3;//联网获取新消息的条数	
+	private int newBusMessages=3;//閺傛壆娈戦崝銊︼拷娣団剝浼呴弶鈩冩殶閿涘矁浠堢純鎴ｅ箯閸欙拷	
 	private int[] messageNumImage={0,R.drawable.message1,
 			R.drawable.message2,R.drawable.message3,
 			R.drawable.message4,R.drawable.message5,
@@ -36,6 +38,19 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 	public void prepare(){
 		img_icon_top=(View)listView.findViewById(R.id.margin);
 //		img_icon_top.setOnClickListener(this);
+		img_icon_top=(ImageView)listView.findViewById(R.id.img_icon_top);
+		img_icon_top.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+//				Log.v("view","click");
+//				Fragment newContent = null;
+////				newContent = new ColorFragment(R.color.blue);
+//				if (newContent != null)
+//					switchFragment(newContent);
+			}
+		});
 	}
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -103,6 +118,7 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 			ImageView message_icon = (ImageView) convertView
 					.findViewById(R.id.new_message_icon);
 			message_icon.setImageResource(getItem(position).messageRes);
+
 			return convertView;
 		}
 
@@ -126,7 +142,12 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 		case 4:
 			newContent = new BusFragment();
 			newBusMessages=0;
-			onActivityCreated(null);//点击后刷新消息数量		
+			onActivityCreated(null);//閻愮懓鍤崥搴礉閺傛澘濮╅幀浣规蒋閺侀璐�閿涳拷			
+			break;
+		case 5:
+			break;
+		case 6:
+			newContent=new MineFragment();
 			break;
 		}
 		if (newContent != null)
