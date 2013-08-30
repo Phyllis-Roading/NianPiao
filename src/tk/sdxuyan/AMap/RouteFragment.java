@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -79,7 +80,9 @@ OnGestureListener, OnMarkerDragListener, OnMapLoadedListener{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		BaseActivity.setActionbarTitle(R.string.route);
+		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
+		
 		detector = new GestureDetector(this.getActivity(), this);
 		json = new getJson();
 		json.execute("http://120.192.31.164:8993/api/pointOfRoutes/");
@@ -199,10 +202,8 @@ OnGestureListener, OnMarkerDragListener, OnMapLoadedListener{
 					handler.sendMessage(Message.obtain(handler,
 							Constants.GETJSON_READY));
 				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} catch (ExecutionException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
@@ -211,10 +212,8 @@ OnGestureListener, OnMarkerDragListener, OnMapLoadedListener{
 //		try {
 //			routeSteps = json.get();
 //		} catch (InterruptedException e1) {
-//			// TODO Auto-generated catch block
 //			e1.printStackTrace();
 //		} catch (ExecutionException e1) {
-//			// TODO Auto-generated catch block
 //			e1.printStackTrace();
 //		}
 		
@@ -275,20 +274,17 @@ OnGestureListener, OnMarkerDragListener, OnMapLoadedListener{
 
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
 
 	@Override
 	public void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 	}
 
 
 	@Override
 	public boolean onDown(MotionEvent e) {
-		// TODO Auto-generated method stub
 		return true; 
 	}
 
@@ -343,20 +339,17 @@ OnGestureListener, OnMarkerDragListener, OnMapLoadedListener{
 
 	@Override
 	public void onLongPress(MotionEvent e) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void onShowPress(MotionEvent e) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -499,25 +492,21 @@ OnGestureListener, OnMarkerDragListener, OnMapLoadedListener{
 
 	@Override
 	public void onMarkerDrag(Marker arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onMarkerDragEnd(Marker arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onMarkerDragStart(Marker arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onMapLoaded() {
-		// TODO Auto-generated method stub
 
 	}
 

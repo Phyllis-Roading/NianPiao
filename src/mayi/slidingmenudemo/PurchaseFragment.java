@@ -130,9 +130,9 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 		LayoutInflater inflater = this.getActivity().getLayoutInflater();
 	    View layout = inflater.inflate(R.layout.buy_dialog,
 	     (ViewGroup) imageView.findViewById(R.id.buy_dialog));
-	    new AlertDialog.Builder(this.getActivity()).setTitle("��Ʊ����").setView(layout)
-	     .setPositiveButton("�ύ", null)
-	     .setNegativeButton("ȡ��", null).show();
+	    new AlertDialog.Builder(this.getActivity()).setTitle("年票订单").setView(layout)
+	     .setPositiveButton("提交", null)
+	     .setNegativeButton("取消", null).show();
 	}
 	
 	@Override

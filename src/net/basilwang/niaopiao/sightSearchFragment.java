@@ -42,6 +42,7 @@ public class sightSearchFragment extends ListFragment implements
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		BaseActivity.setActionbarTitle(R.string.sight_search);
+		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
 		if (null == mView) {
 			mView = inflater.inflate(R.layout.sight_search, container, false);
 			initView();

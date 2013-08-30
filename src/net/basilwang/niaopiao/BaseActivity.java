@@ -21,6 +21,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 public class BaseActivity extends SlidingFragmentActivity {
 
 	private int mTitleRes;
+	private static View actionbarNav;
 	private static TextView tv_title;
 	protected ListFragment mFrag;
 
@@ -48,9 +49,10 @@ public class BaseActivity extends SlidingFragmentActivity {
 		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);
 		actionBar.setBackgroundDrawable(d);
 		actionBar.setHomeButtonEnabled(true);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		
-		View view = (View)findViewById(R.id.abs_left);
-		view.setOnClickListener(new OnClickListener() {
+		actionbarNav = (View)findViewById(R.id.abs_left_nav);
+		actionbarNav.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -68,14 +70,14 @@ public class BaseActivity extends SlidingFragmentActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
-			toggle();
-			return true;
+//		switch (item.getItemId()) {
+//		case android.R.id.home:
+//			toggle();
+//			return true;
 //		case ActionBar.DISPLAY_USE_LOGO:
 //			toggle();
 //			return true;
-		}
+//		}
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -91,5 +93,9 @@ public class BaseActivity extends SlidingFragmentActivity {
 	
 	public static void setActionbarTitle(String mTitleRes){
 		tv_title.setText(mTitleRes);
+	}
+	
+	public static void setActionbarNavVisibility(int visibility){
+		actionbarNav.setVisibility(visibility);
 	}
 }

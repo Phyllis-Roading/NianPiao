@@ -30,6 +30,7 @@ public class SightItemFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		BaseActivity.setActionbarTitle(sightDetailModel.getTitle());
+		BaseActivity.setActionbarNavVisibility(View.GONE);
 		if(null==mView){
 			mView=inflater.inflate(R.layout.sight_detail_page, container, false);
 			initViw();
