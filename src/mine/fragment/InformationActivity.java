@@ -5,12 +5,8 @@ import br.com.dina.ui.widget.UIButton.ClickListener;
 import br.com.dina.ui.widget.UITableView;
 import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
-import net.basilwang.niaopiao.R.layout;
-import net.basilwang.niaopiao.R.menu;
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 
 public class InformationActivity extends TestActivity {
@@ -59,10 +55,10 @@ public class InformationActivity extends TestActivity {
 
 	private void initTableView() {
 		// TODO Auto-generated method stub
-		information.addBasicItem("êÇ³Æ");
-		information.addBasicItem("ÐÔ±ð");
-		information.addBasicItem("ÉúÈÕ");
-		information.addBasicItem("µç»°ºÅÂë");
+		information.addBasicItem("ï¿½Ç³ï¿½");
+		information.addBasicItem("ï¿½Ô±ï¿½");
+		information.addBasicItem("ï¿½ï¿½ï¿½ï¿½");
+		information.addBasicItem("ï¿½ç»°ï¿½ï¿½ï¿½ï¿½");
 		information.commit();
 	}
 
