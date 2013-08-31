@@ -42,18 +42,18 @@ public final class R {
 		public static final int image = 0x7f050051;
 		public static final int itemContainer = 0x7f050050;
 		public static final int itemCount = 0x7f050054;
-		public static final int scrollView = 0x7f05006c;
+		public static final int scrollView = 0x7f05006d;
 		public static final int subtitle = 0x7f050053;
-		public static final int tableView = 0x7f050092;
+		public static final int tableView = 0x7f050093;
 		public static final int title = 0x7f050052;
 		public static final int viewsContainer = 0x7f05004e;
 	}
 	public static final class layout {
-		public static final int list_container = 0x7f030021;
-		public static final int list_item_bottom = 0x7f030022;
-		public static final int list_item_middle = 0x7f030023;
-		public static final int list_item_single = 0x7f030024;
-		public static final int list_item_top = 0x7f030025;
+		public static final int list_container = 0x7f030020;
+		public static final int list_item_bottom = 0x7f030021;
+		public static final int list_item_middle = 0x7f030022;
+		public static final int list_item_single = 0x7f030023;
+		public static final int list_item_top = 0x7f030024;
 		public static final int uitableview_activity = 0x7f030038;
 	}
 	public static final class string {

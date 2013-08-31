@@ -78,14 +78,14 @@ public class MineFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-//		Intent i = new Intent();
+		Intent i = new Intent();
 		switch (v.getId()) {
 		case R.id.edit:
-			// i = new Intent(MineFragment.this.getActivity(),
-			// InformationActivity.class);
-			// startActivity(i);
-			switchFragment(new EditInformationFragment());
-			System.out.println("click");
+			 i = new Intent(MineFragment.this.getActivity(),
+			 InformationActivity.class);
+			 startActivity(i);
+//			switchFragment(new EditInformationFragment());
+//			System.out.println("click");
 			break;
 		case R.id.strategy:
 			// i = new Intent(this.getActivity(), ViewFragment.class);
