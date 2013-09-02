@@ -25,11 +25,10 @@ public class HistoryFragment extends ListFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		BaseActivity.setActionbarTitle(R.string.mine_history);
 		BaseActivity.setActionbarNavVisibility(View.GONE);
-		if(historyView==null){
-			historyView=inflater.inflate(R.layout.mine_history, null);
+		if (historyView == null) {
+			historyView = inflater.inflate(R.layout.mine_history, null);
 			initView();
 			initValidata();
 			bindData();
@@ -39,35 +38,23 @@ public class HistoryFragment extends ListFragment {
 	}
 
 	private void initValidata() {
-		// TODO Auto-generated method stub
-		mContext=historyView.getContext();
+		mContext = historyView.getContext();
 		historyItemModels = new ArrayList<SightListItemModel>();
 		for (int i = 0; i < 2; i++) {
 			SightListItemModel ListItem = new SightListItemModel(
-					R.drawable.sight_img1, "森林公园",
-					"AAAA", "100",
-					"4.5", "燕山立交桥二环东路",
-					"one");
+					R.drawable.sight_img1, "森林公园", "AAAA", "100", "4.5",
+					"燕山立交桥二环东路", "one");
 			historyItemModels.add(ListItem);
 		}
 	}
 
 	private void initView() {
-		// TODO Auto-generated method stub
-		listView=(MyListView)historyView.findViewById(android.R.id.list);
+		listView = (MyListView) historyView.findViewById(android.R.id.list);
 	}
 
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onActivityCreated(savedInstanceState);
-		
-	}
 	private void bindData() {
-		// �������������ҽ��а���ݵ�listview��
 		listView.setAdapter(new SightSearchListAdapter(mContext,
 				historyItemModels));
 	}
 
-	
 }

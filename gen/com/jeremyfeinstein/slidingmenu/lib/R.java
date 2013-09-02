@@ -325,7 +325,7 @@ public final class R {
 		public static final int showCustom = 0x7f050008;
 		public static final int showHome = 0x7f050005;
 		public static final int showTitle = 0x7f050007;
-		public static final int slidingmenumain = 0x7f050088;
+		public static final int slidingmenumain = 0x7f050080;
 		public static final int tabMode = 0x7f050003;
 		public static final int useLogo = 0x7f050004;
 		public static final int wrap_content = 0x7f050000;
@@ -356,9 +356,9 @@ public final class R {
 		public static final int abs__search_dropdown_item_icons_2line = 0x7f030013;
 		public static final int abs__search_view = 0x7f030014;
 		public static final int abs__simple_dropdown_hint = 0x7f030015;
-		public static final int sherlock_spinner_dropdown_item = 0x7f030032;
-		public static final int sherlock_spinner_item = 0x7f030033;
-		public static final int slidingmenumain = 0x7f030037;
+		public static final int sherlock_spinner_dropdown_item = 0x7f03002f;
+		public static final int sherlock_spinner_item = 0x7f030030;
+		public static final int slidingmenumain = 0x7f030034;
 	}
 	public static final class string {
 		public static final int abs__action_bar_home_description = 0x7f0a0000;

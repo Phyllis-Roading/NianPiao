@@ -60,7 +60,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 		icon = (ImageView) mineView.findViewById(R.id.icon);
 		name = (TextView) mineView.findViewById(R.id.name);
 		integral = (TextView) mineView.findViewById(R.id.integral);
-		edit = (Button) mineView.findViewById(R.id.edit);
+		edit = (Button) mineView.findViewById(R.id.mine_edit);
 		strategy = (Button) mineView.findViewById(R.id.strategy);
 		gone = (Button) mineView.findViewById(R.id.gone);
 		want = (Button) mineView.findViewById(R.id.want);
@@ -80,7 +80,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		Intent i = new Intent();
 		switch (v.getId()) {
-		case R.id.edit:
+		case R.id.mine_edit:
 			 i = new Intent(MineFragment.this.getActivity(),
 			 InformationActivity.class);
 			 startActivity(i);
