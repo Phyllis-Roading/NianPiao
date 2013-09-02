@@ -53,7 +53,7 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 		imageView=inflater.inflate(R.layout.url_connection_image, container, false);
         prepare();
 		timeTaks = new ImageTimerTask();
-		// �?000�?��每隔5000执行timeTaks
+		//从3000开始每隔3000执行timeTaks
 		autoGallery.scheduleAtFixedRate(timeTaks, 3000, 3000);
 		timeThread = new Thread() {
 			public void run() {
@@ -96,7 +96,7 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			if (msg.what == touchEventId) {
-//				if (lastY != scrollView.getScrollY())//左右移动不变，但页面�?��
+//				if (lastY != scrollView.getScrollY())//左右移动不变，页面需要左右移动变化
 				{
 					handler.sendMessageDelayed(
 							handler.obtainMessage(touchEventId, scrollView), 5);
