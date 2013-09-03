@@ -29,7 +29,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
@@ -82,12 +81,12 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 			File file = new File(picPath);
 			if(file!=null)
     		{
-				//ÕâÀïµÄviewÊÇÉÏ´«½ø¶ÈµÄµ¯¿ò
+				//ï¿½ï¿½ï¿½ï¿½ï¿½viewï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ÈµÄµï¿½ï¿½ï¿½
 				View uploadingView = getLayoutInflater().inflate(R.layout.iconuploading_progress, null);
 				mprogressbar = (ProgressBar)uploadingView.findViewById(R.id.progressBar);
 				mtextview = (TextView)uploadingView.findViewById(R.id.textView);
-				new AlertDialog.Builder(IconUploadActivity.this).setTitle("Í¼Æ¬ÉÏ´«½ø¶È").setView(uploadingView).create().show();
-//				builder.setTitle("Í¼Æ¬ÉÏ´«½ø¶È");
+				new AlertDialog.Builder(IconUploadActivity.this).setTitle("Í¼Æ¬ï¿½Ï´ï¿½ï¿½ï¿½ï¿½").setView(uploadingView).create().show();
+//				builder.setTitle("Í¼Æ¬ï¿½Ï´ï¿½ï¿½ï¿½ï¿½");
 //				builder.setView(uploadingView);
 //				builder.create().show();
 				UploadUtil uploadutiltask=new UploadUtil();
@@ -136,9 +135,9 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 	private void alert()
     {
     	Dialog dialog = new AlertDialog.Builder(this)
-		.setTitle("ÌáÊ¾")
-		.setMessage("ÄúÑ¡ÔñµÄ²»ÊÇÓÐÐ§µÄÍ¼Æ¬")
-		.setPositiveButton("È·¶¨",
+		.setTitle("ï¿½ï¿½Ê¾")
+		.setMessage("ï¿½ï¿½Ñ¡ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Í¼Æ¬")
+		.setPositiveButton("È·ï¿½ï¿½",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,
 							int which) {
@@ -165,13 +164,13 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 //	    	  
 //		      HttpClient httpclient = new DefaultHttpClient();
 //		
-//		      //ÉèÖÃÍ¨ÐÅÐ­Òé°æ±¾
+//		      //ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ð­ï¿½ï¿½æ±¾
 //		
 //		     httpclient.getParams().setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
 //		 
 //		      HttpPost httppost = new HttpPost(requestURL);
 //		      
-//		      MultipartEntity entity = new MultipartEntity(); //ÎÄ¼þ´«Êä
+//		      MultipartEntity entity = new MultipartEntity(); //ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 //		      
 //		      ContentBody cbFile = new FileBody(file);
 //		
@@ -227,7 +226,7 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 				FileInputStream fis = new FileInputStream(file);
 				long total = fis.available();
 				String totalstr = String.valueOf(total);
-				Log.d("ÎÄ¼þ´óÐ¡", totalstr);
+				Log.d("ï¿½Ä¼ï¿½ï¿½ï¿½Ð¡", totalstr);
 				byte[] buffer = new byte[8192]; // 8k
 				int count = 0;
 				int length = 0;
@@ -235,7 +234,7 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 					dos.write(buffer, 0, count);
 					length += count;
 					publishProgress((int) ((length / (float) total) * 100));
-					//ÎªÁËÑÝÊ¾½ø¶È,ÐÝÃß500ºÁÃë
+					//Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½500ï¿½ï¿½ï¿½ï¿½
 					Thread.sleep(300);
 				}			
 				fis.close();
@@ -250,10 +249,10 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 				String result = br.readLine();
 				dos.close();
 				is.close();
-				return "Í¼Æ¬ÉÏ´«³É¹¦£¡";
+				return "Í¼Æ¬ï¿½Ï´ï¿½ï¿½É¹ï¿½ï¿½ï¿½";
 		}catch (Exception e) {
 			e.printStackTrace();
-			return "Í¼Æ¬ÉÏ´«Ê§°Ü£¡";
+			return "Í¼Æ¬ï¿½Ï´ï¿½Ê§ï¿½Ü£ï¿½";
 		}	
 			
 	}
@@ -284,9 +283,9 @@ public class IconUploadActivity extends Activity implements OnClickListener{
 //			// TODO Auto-generated method stub
 //  		    super.onPostExecute(result);
 //  		    if(result==HttpStatus.SC_OK){
-//  			    Toast.makeText(MainActivity.this,"Í¼Æ¬ÉÏ´«³É¹¦£¡" ,Toast.LENGTH_SHORT).show();
+//  			    Toast.makeText(MainActivity.this,"Í¼Æ¬ï¿½Ï´ï¿½ï¿½É¹ï¿½ï¿½ï¿½" ,Toast.LENGTH_SHORT).show();
 //  		    }else{
-//  			     Toast.makeText(MainActivity.this,"Í¼Æ¬ÉÏ´«Ê§°Ü£¡" ,Toast.LENGTH_SHORT).show();
+//  			     Toast.makeText(MainActivity.this,"Í¼Æ¬ï¿½Ï´ï¿½Ê§ï¿½Ü£ï¿½" ,Toast.LENGTH_SHORT).show();
 //  		         }
 //  			
 //		}

@@ -6,7 +6,6 @@ import java.util.List;
 import net.basilwang.nianpiao.adapter.SightSearchListAdapter;
 import net.basilwang.nianpiao.model.SightListItemModel;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -34,7 +33,7 @@ public class sightSearchFragment extends ListFragment implements
 	private ListView listView_recommend;
 	private LinearLayout layout;
 	private PopupWindow popWindow;
-	private String title[] = { "Ä¬ÈÏÅÅÐò", "°´ÈËÆø", "°´¼Û¸ñ" };
+	private String title[] = { "Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½Û¸ï¿½" };
 
 	private List<SightListItemModel> sightItemModels;
 
@@ -68,7 +67,7 @@ public class sightSearchFragment extends ListFragment implements
 				switch (position) {
 				case 0:
 
-					Log.v("recommend item0 is clicked", "Ä¬ÈÏÅÅÐò±»µç»÷ÁË	");
+					Log.v("recommend item0 is clicked", "Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ò±»µï¿½ï¿½ï¿½ï¿½	");
 					break;
 
 				default:
@@ -79,6 +78,7 @@ public class sightSearchFragment extends ListFragment implements
 		});
 	}
 
+	@SuppressWarnings("deprecation")
 	private void showpopupWindow(View view, int width) {
 		popWindow = new PopupWindow(getActivity());
 		popWindow.setBackgroundDrawable(new BitmapDrawable());
@@ -120,7 +120,7 @@ public class sightSearchFragment extends ListFragment implements
 	}
 
 	private void bindData() {
-		// ´´½¨ÊÊÅäÆ÷²¢ÇÒ½øÐÐ°ó¶¨Êý¾Ýµ½listviewÖÐ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½Ýµï¿½listviewï¿½ï¿½
 		listView_sight.setAdapter(new SightSearchListAdapter(mContext,
 				sightItemModels));
 		listView_recommend.setAdapter(new ArrayAdapter<String>(getActivity(),
@@ -159,7 +159,7 @@ public class sightSearchFragment extends ListFragment implements
 			long id) {
 		/*
 		 * switch (position) { case 0: Log.v("sight item0 is clicked",
-		 * "ÊªµØ¹«Ô°±»µç»÷ÁË	"); break;
+		 * "Êªï¿½Ø¹ï¿½Ô°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	"); break;
 		 * 
 		 * default: break; }
 		 */

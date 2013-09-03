@@ -6,7 +6,6 @@ import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.v4.app.Fragment;
@@ -69,9 +68,9 @@ public class MineFragment extends Fragment implements OnClickListener {
 
 	private void initTableView() {
 		// TODO Auto-generated method stub
-		tableView.addBasicItem(R.drawable.mine_comment, "ÎÒµÄ¶©µ¥", null);
-		tableView.addBasicItem(R.drawable.mine_favorite, "ÎÒµÄÊÕ²Ø", null);
-		tableView.addBasicItem(R.drawable.mine_browse_history, "ä¯ÀÀÀúÊ·", null);
+		tableView.addBasicItem(R.drawable.mine_comment, "ï¿½ÒµÄ¶ï¿½ï¿½ï¿½", null);
+		tableView.addBasicItem(R.drawable.mine_favorite, "ï¿½Òµï¿½ï¿½Õ²ï¿½", null);
+		tableView.addBasicItem(R.drawable.mine_browse_history, "ï¿½ï¿½ï¿½ï¿½ï¿½Ê·", null);
 		tableView.commit();
 	}
 

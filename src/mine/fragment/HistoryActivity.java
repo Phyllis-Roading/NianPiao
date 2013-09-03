@@ -1,14 +1,11 @@
 package mine.fragment;
 
-import com.actionbarsherlock.view.MenuItem;
-
 import net.basilwang.nianpiao.custom.MyListView;
 import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.NianPiaoActivity;
 import net.basilwang.niaopiao.R;
 import br.com.dina.ui.widget.UITableView;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -38,8 +35,8 @@ public class HistoryActivity extends TestActivity {
 		// setBehindContentView(R.layout.mine);
 		listView = (MyListView) findViewById(R.id.listview_history);
 		adapter = new HistoryAdapter(this);
-		adapter.add(new HistoryItem(R.drawable.sight_img1, "ÊªµØ¹«Ô°", "AAAA", "ÑàÉ½Á¢½»ÇÅ¶þ»·¶«Â·", "160Ôª"));
-		adapter.add(new HistoryItem(R.drawable.sight_img2, "É­ÁÖ¹«Ô°", "AAAA", "ÑàÉ½Á¢½»ÇÅ¶þ»·¶«Â·", "160Ôª"));
+		adapter.add(new HistoryItem(R.drawable.sight_img1, "Êªï¿½Ø¹ï¿½Ô°", "AAAA", "ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½Â·", "160Ôª"));
+		adapter.add(new HistoryItem(R.drawable.sight_img2, "É­ï¿½Ö¹ï¿½Ô°", "AAAA", "ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½Â·", "160Ôª"));
 		listView.setAdapter(adapter);
 	}
 
@@ -50,8 +47,8 @@ public class HistoryActivity extends TestActivity {
 	// setContentView(R.layout.mine_history);
 	// listView = (MyListView) findViewById(R.id.listview_history);
 	// adapter = new HistoryAdapter(this);
-	// adapter.add(new HistoryItem(0, "Çàµº½ðÉ³Ì²", "5·Ö", "ÇàµºÊÐ»ÆµºÇø½ðÉ³Ì²", "100Ôª"));
-	// adapter.add(new HistoryItem(0, "Çàµº½ðÉ³Ì²", "5·Ö", "ÇàµºÊÐ»ÆµºÇø½ðÉ³Ì²", "100Ôª"));
+	// adapter.add(new HistoryItem(0, "ï¿½àµºï¿½ï¿½É³Ì²", "5ï¿½ï¿½", "ï¿½àµºï¿½Ð»Æµï¿½ï¿½ï¿½ï¿½É³Ì²", "100Ôª"));
+	// adapter.add(new HistoryItem(0, "ï¿½àµºï¿½ï¿½É³Ì²", "5ï¿½ï¿½", "ï¿½àµºï¿½Ð»Æµï¿½ï¿½ï¿½ï¿½É³Ì²", "100Ôª"));
 	// listView.setAdapter(adapter);
 	//
 	// }
@@ -63,8 +60,8 @@ public class HistoryActivity extends TestActivity {
 	// setContentView(R.layout.mine_history);
 	// // listView = (MyListView) findViewById(R.id.listview_history);
 	// // adapter = new HistoryAdapter(this);
-	// // adapter.add(new HistoryItem(0, "Çàµº½ðÉ³Ì²", "5·Ö", "ÇàµºÊÐ»ÆµºÇø½ðÉ³Ì²", "100Ôª"));
-	// // adapter.add(new HistoryItem(0, "Çàµº½ðÉ³Ì²", "5·Ö", "ÇàµºÊÐ»ÆµºÇø½ðÉ³Ì²", "100Ôª"));
+	// // adapter.add(new HistoryItem(0, "ï¿½àµºï¿½ï¿½É³Ì²", "5ï¿½ï¿½", "ï¿½àµºï¿½Ð»Æµï¿½ï¿½ï¿½ï¿½É³Ì²", "100Ôª"));
+	// // adapter.add(new HistoryItem(0, "ï¿½àµºï¿½ï¿½É³Ì²", "5ï¿½ï¿½", "ï¿½àµºï¿½Ð»Æµï¿½ï¿½ï¿½ï¿½É³Ì²", "100Ôª"));
 	// // listView.setAdapter(adapter);
 	// }
 
@@ -72,7 +69,7 @@ public class HistoryActivity extends TestActivity {
 	// public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu)
 	// {
 	// // TODO Auto-generated method stub
-	// menu.add("Çå¿Õ").setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+	// menu.add("ï¿½ï¿½ï¿½").setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 	// return super.onCreateOptionsMenu(menu);
 	// }
 	//
