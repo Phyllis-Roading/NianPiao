@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.Gallery;
 
+@SuppressWarnings("deprecation")
 public class GuideGallery extends Gallery {
 
 	private PurchaseFragment m_iact;

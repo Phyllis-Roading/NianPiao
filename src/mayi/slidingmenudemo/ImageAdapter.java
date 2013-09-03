@@ -3,6 +3,7 @@ package mayi.slidingmenudemo;
 import java.util.List;
 
 import net.basilwang.niaopiao.R;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -16,8 +17,9 @@ import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+@SuppressWarnings("deprecation")
 public class ImageAdapter extends BaseAdapter{  
-    private List<String> imageUrls;       //鍥剧墖鍦板潃list  
+    private List<String> imageUrls;         
     private Context context;  
     private int positon=0;
     private ImageAdapter self;
@@ -32,7 +34,6 @@ public class ImageAdapter extends BaseAdapter{
 			R.drawable.four
 	};
     public ImageAdapter(/*List<String> imageUrls, */Context context) {  
-       // this.imageUrls = imageUrls;  
         this.context = context;  
         this.self = this;
     }  
@@ -49,7 +50,7 @@ public class ImageAdapter extends BaseAdapter{
         return position;  
     }  
   
-    @SuppressWarnings("unused")
+    @SuppressLint("HandlerLeak")
 	private Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			try {
@@ -70,7 +71,7 @@ public class ImageAdapter extends BaseAdapter{
   
         //Bitmap image;  
         if(convertView==null){  
-            convertView = LayoutInflater.from(context).inflate(R.layout.imageitem,null); //瀹炰緥鍖朿onvertView  
+            convertView = LayoutInflater.from(context).inflate(R.layout.imageitem,null);   
             Gallery.LayoutParams params = new Gallery.LayoutParams(Gallery.LayoutParams.WRAP_CONTENT,Gallery.LayoutParams.WRAP_CONTENT);
             convertView.setLayoutParams(params);
             convertView.setTag(imgs);  
@@ -81,7 +82,6 @@ public class ImageAdapter extends BaseAdapter{
         }  
         imageView = (ImageView) convertView.findViewById(R.id.gallery_image);  
         imageView.setImageResource(imgs[position % imgs.length]);
-        //璁剧疆缂╂斁姣斾緥锛氫繚鎸佸師鏍� 
         imageView.setScaleType(ImageView.ScaleType.FIT_XY); 
         changePointView(position % imgs.length);
         return convertView;  
