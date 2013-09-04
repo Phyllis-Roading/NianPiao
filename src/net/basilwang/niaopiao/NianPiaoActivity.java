@@ -1,8 +1,13 @@
 package net.basilwang.niaopiao;
 
+import net.basilwang.utils.NetworkUtils;
 import mayi.slidingmenudemo.SlideMenuFragment;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -27,6 +32,7 @@ public class NianPiaoActivity extends BaseActivity {
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
 
 		initSlidingMenu(savedInstanceState);
+		checkNetwork();
 	}
 
 	private void initSlidingMenu(Bundle savedInstanceState) {
@@ -36,11 +42,10 @@ public class NianPiaoActivity extends BaseActivity {
 		if (mContent == null)
 			mContent = new sightSearchFragment();
 
-		// ����������ͼ
 		setContentView(R.layout.content_frame);
 		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.content_frame, mContent).commit();
-		// ���û����˵�����ͼ
+				.replace(R.id.content_frame, mContent).addToBackStack(null).commit();
+
 		setBehindContentView(R.layout.menu_frame);
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.menu_frame, new SlideMenuFragment()).commit();
@@ -54,10 +59,21 @@ public class NianPiaoActivity extends BaseActivity {
 	}
 
 	public void switchContent(Fragment fragment) {
-		mContent = fragment;
-		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.content_frame, fragment).commit();
+//		if (flag == 1)
+		mContent=fragment;
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.content_frame, mContent).addToBackStack(null)
+					.commit();
+			Log.v("stack count", ""+getSupportFragmentManager().getBackStackEntryCount());
+//		else
+//			getSupportFragmentManager().beginTransaction()
+//					.replace(R.id.content_frame, fragment).commit();
 		getSlidingMenu().showContent();
+	}
+
+	private void checkNetwork() {
+		if (!NetworkUtils.isConnect(this))
+			Toast.makeText(this, "请检查网络是否连接", Toast.LENGTH_LONG).show();
 	}
 
 }

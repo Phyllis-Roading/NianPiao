@@ -3,8 +3,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ListView;
 /**
- * 重写ListView->实现Listview和ScrollView的滚动不冲突
- * @author jiangqingqing
+ * 閲嶅啓ListView->瀹炵幇Listview鍜孲crollView鐨勬粴鍔ㄤ笉鍐茬獊
  *
  */
 public class MyListView extends ListView {

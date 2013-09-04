@@ -15,6 +15,7 @@ public class BusFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		BaseActivity.setActionbarTitle(R.string.bus_news);
+		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
 		busFragment=inflater.inflate(R.layout.bus_fragment, container,false);
 		return busFragment;
 	}

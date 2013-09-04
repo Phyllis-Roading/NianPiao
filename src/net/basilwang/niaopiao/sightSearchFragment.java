@@ -34,7 +34,7 @@ public class sightSearchFragment extends ListFragment implements
 	private ListView listView_recommend;
 	private LinearLayout layout;
 	private PopupWindow popWindow;
-	private String title[] = { "Ä¬ÈÏÅÅĞò", "°´ÈËÆø", "°´¼Û¸ñ" };
+	private String title[] = { "é»˜è®¤æ’åº", "æŒ‰äººæ°”æ’åº", "æŒ‰ä»·æ ¼æ’åº" };
 
 	private List<SightListItemModel> sightItemModels;
 
@@ -43,12 +43,10 @@ public class sightSearchFragment extends ListFragment implements
 			Bundle savedInstanceState) {
 		BaseActivity.setActionbarTitle(R.string.sight_search);
 		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
-		if (null == mView) {
-			mView = inflater.inflate(R.layout.sight_search, container, false);
-			initView();
-			initValidata();
-			bindData();
-		}
+		mView = inflater.inflate(R.layout.sight_search, container, false);
+		initView();
+		initValidata();
+		bindData();
 		return mView;
 	}
 
@@ -68,7 +66,7 @@ public class sightSearchFragment extends ListFragment implements
 				switch (position) {
 				case 0:
 
-					Log.v("recommend item0 is clicked", "Ä¬ÈÏÅÅĞò±»µç»÷ÁË	");
+					Log.v("recommend item0 is clicked", "é»˜è®¤æ’åºè¢«ç‚¹å‡»");
 					break;
 
 				default:
@@ -120,7 +118,7 @@ public class sightSearchFragment extends ListFragment implements
 	}
 
 	private void bindData() {
-		// ´´½¨ÊÊÅäÆ÷²¢ÇÒ½øĞĞ°ó¶¨Êı¾İµ½listviewÖĞ
+		// ä¸ºlistViewç»‘å®šæ•°æ®
 		listView_sight.setAdapter(new SightSearchListAdapter(mContext,
 				sightItemModels));
 		listView_recommend.setAdapter(new ArrayAdapter<String>(getActivity(),
@@ -159,7 +157,7 @@ public class sightSearchFragment extends ListFragment implements
 			long id) {
 		/*
 		 * switch (position) { case 0: Log.v("sight item0 is clicked",
-		 * "ÊªµØ¹«Ô°±»µç»÷ÁË	"); break;
+		 * "æ¹¿åœ°å…¬å›­è¢«ç‚¹å‡»"); break;
 		 * 
 		 * default: break; }
 		 */
