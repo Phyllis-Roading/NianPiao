@@ -160,7 +160,7 @@ public class SlideMenuFragment extends ListFragment implements OnClickListener{
 			return;
 		if (getActivity() instanceof NianPiaoActivity) {
 			NianPiaoActivity fca = (NianPiaoActivity) getActivity();
-			fca.switchContent(fragment);
+			fca.switchContent(fragment,0);
 		}
 	}
 

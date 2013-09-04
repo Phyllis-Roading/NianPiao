@@ -5,6 +5,7 @@ import mayi.slidingmenudemo.SlideMenuFragment;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.Toast;
@@ -41,11 +42,11 @@ public class NianPiaoActivity extends BaseActivity {
 					savedInstanceState, "mContent");
 		if (mContent == null)
 			mContent = new sightSearchFragment();
-
+		//设置内容视图
 		setContentView(R.layout.content_frame);
 		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.content_frame, mContent).addToBackStack(null).commit();
-
+				.replace(R.id.content_frame, mContent).commit();
+		//设置滑动菜单视图
 		setBehindContentView(R.layout.menu_frame);
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.menu_frame, new SlideMenuFragment()).commit();
@@ -58,16 +59,18 @@ public class NianPiaoActivity extends BaseActivity {
 		getSupportFragmentManager().putFragment(outState, "mContent", mContent);
 	}
 
-	public void switchContent(Fragment fragment) {
-//		if (flag == 1)
-		mContent=fragment;
+	public void switchContent(Fragment fragment, int flag) {
+		mContent = fragment;
+		if (flag == 1) {
 			getSupportFragmentManager().beginTransaction()
 					.replace(R.id.content_frame, mContent).addToBackStack(null)
 					.commit();
-			Log.v("stack count", ""+getSupportFragmentManager().getBackStackEntryCount());
-//		else
-//			getSupportFragmentManager().beginTransaction()
-//					.replace(R.id.content_frame, fragment).commit();
+		} else {
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.content_frame, fragment).commit();
+			//如果Fragment是由滑动菜单切换的，则将BackStack清空
+			getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+		}
 		getSlidingMenu().showContent();
 	}
 

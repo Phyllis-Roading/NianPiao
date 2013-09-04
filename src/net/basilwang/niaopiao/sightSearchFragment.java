@@ -178,7 +178,7 @@ public class sightSearchFragment extends ListFragment implements
 			return;
 		if (getActivity() instanceof NianPiaoActivity) {
 			NianPiaoActivity ma = (NianPiaoActivity) getActivity();
-			ma.switchContent(mContent2);
+			ma.switchContent(mContent2,1);
 		}
 	}
 }
