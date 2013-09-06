@@ -28,5 +28,7 @@
     <string name="mine_title">我的行囊</string>
     <string name="mine_history">浏览历史</string>
     <string name="mine_edit">编辑资料</string>
+    <string name="sd_card">SD卡不存在或不可用</string>
+    <string name="save_uccess">图片已经保存到sd卡</string>
 
 </resources>

@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:text="昵称"
-                android:textColor="#009FCC"
+                android:textColor="#C71585"
                 android:textSize="20sp" />
         </TableRow>
 
@@ -54,10 +54,10 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/edit"
+        android:id="@+id/mine_edit"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_alignParentRight="true"
-        android:background="@drawable/mine_comment" />
+        android:background="@drawable/edit_red" />
 
 </RelativeLayout>

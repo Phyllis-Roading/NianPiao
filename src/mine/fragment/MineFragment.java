@@ -1,12 +1,12 @@
 package mine.fragment;
 
 import net.basilwang.niaopiao.BaseActivity;
+import net.basilwang.niaopiao.NianPiaoActivity;
 import net.basilwang.niaopiao.R;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.v4.app.Fragment;
@@ -34,7 +34,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		BaseActivity.setActionbarTitle(R.string.mine_title);
 		BaseActivity.setActionbarNavVisibility(View.VISIBLE);
-		
+
 		mineView = inflater.inflate(R.layout.mine, container, false);
 		initwidget();
 		edit.setOnClickListener(this);
@@ -60,7 +60,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 		icon = (ImageView) mineView.findViewById(R.id.icon);
 		name = (TextView) mineView.findViewById(R.id.name);
 		integral = (TextView) mineView.findViewById(R.id.integral);
-		edit = (Button) mineView.findViewById(R.id.edit);
+		edit = (Button) mineView.findViewById(R.id.mine_edit);
 		strategy = (Button) mineView.findViewById(R.id.strategy);
 		gone = (Button) mineView.findViewById(R.id.gone);
 		want = (Button) mineView.findViewById(R.id.want);
@@ -69,9 +69,9 @@ public class MineFragment extends Fragment implements OnClickListener {
 
 	private void initTableView() {
 		// TODO Auto-generated method stub
-		tableView.addBasicItem(R.drawable.mine_comment, "我的订单", null);
-		tableView.addBasicItem(R.drawable.mine_favorite, "我的收藏", null);
-		tableView.addBasicItem(R.drawable.mine_browse_history, "浏览历史", null);
+		tableView.addBasicItem(R.drawable.mine_comment, "鎴戠殑璁㈠崟", null);
+		tableView.addBasicItem(R.drawable.mine_favorite, "鎴戠殑鏀惰棌", null);
+		tableView.addBasicItem(R.drawable.mine_browse_history, "娴忚鍘嗗彶", null);
 		tableView.commit();
 	}
 
@@ -80,11 +80,12 @@ public class MineFragment extends Fragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		Intent i = new Intent();
 		switch (v.getId()) {
-		case R.id.edit:
-			i = new Intent(MineFragment.this.getActivity(), InformationActivity.class);
-			startActivity(i);
-			// switchFragment(new ViewFragment());
-			System.out.println("click");
+		case R.id.mine_edit:
+			 i = new Intent(MineFragment.this.getActivity(),
+			 InformationActivity.class);
+			 startActivity(i);
+//			switchFragment(new EditInformationFragment());
+//			System.out.println("click");
 			break;
 		case R.id.strategy:
 			// i = new Intent(this.getActivity(), ViewFragment.class);
@@ -107,7 +108,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 	private void clickTableItem(int index) {
 		// TODO Auto-generated method stub
 		System.out.println("click" + index);
-		Intent intent = new Intent();
+//		Intent intent = new Intent();
 		switch (index) {
 		case 0:
 			// intent=new Intent(MineFragment.this.getActivity(),
@@ -120,20 +121,18 @@ public class MineFragment extends Fragment implements OnClickListener {
 			// startActivity(intent);
 			break;
 		case 2:
-			intent = new Intent(MineFragment.this.getActivity(),
-					HistoryActivity.class);
-			startActivity(intent);
+			switchFragment(new HistoryFragment());
 			break;
 		}
 
 	}
 
-	// private void switchFragment(Fragment fragment) {
-	// if (getActivity() == null)
-	// return;
-	// if (getActivity() instanceof MainActivity) {
-	// MainActivity fca = (MainActivity) getActivity();
-	// fca.switchContent(fragment);
-	// }
-	// }
+	private void switchFragment(Fragment fragment) {
+		if (getActivity() == null)
+			return;
+		if (getActivity() instanceof NianPiaoActivity) {
+			NianPiaoActivity fca = (NianPiaoActivity) getActivity();
+			fca.switchContent(fragment);
+		}
+	}
 }
