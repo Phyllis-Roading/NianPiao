@@ -3,7 +3,6 @@ package tk.sdxuyan.AMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-
 import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
 import android.app.ProgressDialog;
@@ -12,8 +11,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.LayoutInflater;

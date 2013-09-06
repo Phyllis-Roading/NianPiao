@@ -6,6 +6,7 @@ import java.util.TimerTask;
 
 import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -36,12 +37,13 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 	public ImageTimerTask timeTaks = null;
 	int gallerypisition = 0;
 	static View imageView;
-	TicketDetails flow,question,partner;
-	Button firsePurchase,secondPurchase;
+	TicketDetails flow,question,partner;//button、textview组合类
+	Button firsePurchase,secondPurchase;//两个抢购的view
 	private ScrollView scrollView;
-	private View firstBuy,secondBuy;
+	private View firstBuy,secondBuy;//抢购view中的button
 	int[] location = new int[2];
 	int[] location2 = new int[2];
+	@SuppressWarnings("unused")
 	private int lastY = 0;
 	private int touchEventId = -135;
 	
@@ -53,7 +55,7 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 		imageView=inflater.inflate(R.layout.url_connection_image, container, false);
         prepare();
 		timeTaks = new ImageTimerTask();
-		// �?000�?��每隔5000执行timeTaks
+		//从3000开始每隔3000执行timeTaks,更换显示的图片
 		autoGallery.scheduleAtFixedRate(timeTaks, 3000, 3000);
 		timeThread = new Thread() {
 			public void run() {
@@ -92,11 +94,37 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 		partner=new TicketDetails((TextView)imageView.findViewById(R.id.txt_partner), (Button)imageView.findViewById(R.id.bnt_partner));
 	}
 	
+	private void init() {
+		images_ga = (GuideGallery) imageView.findViewById(R.id.image_wall_gallery);
+		images_ga.setImageActivity(this);
+		ImageAdapter imageAdapter = new ImageAdapter(this.getActivity());
+		images_ga.setAdapter(imageAdapter);
+		LinearLayout pointLinear = (LinearLayout) imageView.findViewById(R.id.gallery_point_linear);
+		pointLinear.setBackgroundColor(Color.argb(200, 135, 135, 152));
+		for (int i = 0; i < 4; i++) {
+			ImageView pointView = new ImageView(this.getActivity());
+			if (i == 0) {
+				pointView.setBackgroundResource(R.drawable.feature_point_cur);
+			} else
+				pointView.setBackgroundResource(R.drawable.feature_point);
+			pointLinear.addView(pointView);
+		}
+		images_ga.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				System.out.println(arg2 + "arg2");
+			}
+		});
+
+	}
+	
+	@SuppressLint("HandlerLeak")
 	Handler handler=new Handler(){
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			if (msg.what == touchEventId) {
-//				if (lastY != scrollView.getScrollY())//左右移动不变，但页面�?��
+//				if (lastY != scrollView.getScrollY())//左右移动不变，页面需要左右移动发生变化
 				{
 					handler.sendMessageDelayed(
 							handler.obtainMessage(touchEventId, scrollView), 5);
@@ -154,30 +182,7 @@ public class PurchaseFragment extends Fragment implements OnClickListener,OnTouc
 		timeTaks.timeCondition = false;
 	}
 	
-	private void init() {
-		images_ga = (GuideGallery) imageView.findViewById(R.id.image_wall_gallery);
-		images_ga.setImageActivity(this);
-		ImageAdapter imageAdapter = new ImageAdapter(this.getActivity());
-		images_ga.setAdapter(imageAdapter);
-		LinearLayout pointLinear = (LinearLayout) imageView.findViewById(R.id.gallery_point_linear);
-		pointLinear.setBackgroundColor(Color.argb(200, 135, 135, 152));
-		for (int i = 0; i < 4; i++) {
-			ImageView pointView = new ImageView(this.getActivity());
-			if (i == 0) {
-				pointView.setBackgroundResource(R.drawable.feature_point_cur);
-			} else
-				pointView.setBackgroundResource(R.drawable.feature_point);
-			pointLinear.addView(pointView);
-		}
-		images_ga.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				System.out.println(arg2 + "arg2");
-			}
-		});
-
-	}
+	@SuppressLint("HandlerLeak")
 	final Handler autoGalleryHandler = new Handler(){
 		public void handleMessage(Message message) {
 			super.handleMessage(message);

@@ -47,6 +47,12 @@ public class sightSearchFragment extends ListFragment implements
 		initView();
 		initValidata();
 		bindData();
+		if (null == mView) {
+			mView = inflater.inflate(R.layout.sight_search, container, false);
+			initView();
+			initValidata();
+			bindData();
+		}
 		return mView;
 	}
 
@@ -77,6 +83,7 @@ public class sightSearchFragment extends ListFragment implements
 		});
 	}
 
+	@SuppressWarnings("deprecation")
 	private void showpopupWindow(View view, int width) {
 		popWindow = new PopupWindow(getActivity());
 		popWindow.setBackgroundDrawable(new BitmapDrawable());

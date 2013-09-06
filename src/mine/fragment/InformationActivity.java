@@ -6,12 +6,16 @@ import java.io.IOException;
 import java.util.Date;
 import net.basilwang.niaopiao.BaseActivity;
 import net.basilwang.niaopiao.R;
+import net.basilwang.niaopiao.R.layout;
+import net.basilwang.niaopiao.R.menu;
+import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.Menu;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -50,6 +54,7 @@ public class InformationActivity extends TestActivity implements
 
 	public InformationActivity() {
 		super(R.string.app_name);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -86,6 +91,24 @@ public class InformationActivity extends TestActivity implements
 		selectPhoto.setOnClickListener(this);
 		uploadPhoto.setOnClickListener(this);
 		photograph.setOnClickListener(this);
+			@Override
+			public void onClick(View view) {
+				// TODO Auto-generated method stub
+				System.out.println("succeed///////");
+				Intent i=new Intent(InformationActivity.this, IconUploadActivity.class);
+				startActivity(i);
+			}
+		});
+		// more.addClickListener(this);
+		initTableView();
+		// information.setClickListener(new ClickListener() {
+		//
+		// @Override
+		// public void onClick(View view) {
+		// // TODO Auto-generated method stub
+		//
+		// }
+		// });
 
 	}
 
@@ -302,4 +325,17 @@ public class InformationActivity extends TestActivity implements
 		}
 	}
 
+//	@Override
+//	public void onClick(View view) {
+//		// TODO Auto-generated method stub
+//		switch (view.getId()) {
+//		case R.id.mine_icon:
+//			System.out.println("succeed///////");
+//			Intent i=new Intent(this, IconUploadActivity.class);
+//			startActivity(i);
+//			break;
+//		case R.id.mine_more:
+//			break;
+//		}
+//	}
 }

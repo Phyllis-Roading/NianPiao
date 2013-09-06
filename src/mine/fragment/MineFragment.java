@@ -7,6 +7,7 @@ import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.v4.app.Fragment;
@@ -122,6 +123,9 @@ public class MineFragment extends Fragment implements OnClickListener {
 			break;
 		case 2:
 			switchFragment(new HistoryFragment());
+			intent = new Intent(MineFragment.this.getActivity(),
+					HistoryActivity.class);
+			startActivity(intent);
 			break;
 		}
 
