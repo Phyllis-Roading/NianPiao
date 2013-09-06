@@ -54,7 +54,6 @@ public class InformationActivity extends TestActivity implements
 
 	public InformationActivity() {
 		super(R.string.app_name);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -62,7 +61,6 @@ public class InformationActivity extends TestActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mine_information);
 		BaseActivity.setActionbarTitle(R.string.mine_edit);
-		BaseActivity.setActionbarNavVisibility(View.GONE);// 设置导航
 		initView();
 		initTableView();
 
@@ -91,24 +89,6 @@ public class InformationActivity extends TestActivity implements
 		selectPhoto.setOnClickListener(this);
 		uploadPhoto.setOnClickListener(this);
 		photograph.setOnClickListener(this);
-			@Override
-			public void onClick(View view) {
-				// TODO Auto-generated method stub
-				System.out.println("succeed///////");
-				Intent i=new Intent(InformationActivity.this, IconUploadActivity.class);
-				startActivity(i);
-			}
-		});
-		// more.addClickListener(this);
-		initTableView();
-		// information.setClickListener(new ClickListener() {
-		//
-		// @Override
-		// public void onClick(View view) {
-		// // TODO Auto-generated method stub
-		//
-		// }
-		// });
 
 	}
 

@@ -48,7 +48,6 @@ public class MineFragment extends Fragment implements OnClickListener {
 
 			@Override
 			public void onClick(int index) {
-				// TODO Auto-generated method stub
 				clickTableItem(index);
 			}
 		});
@@ -56,7 +55,6 @@ public class MineFragment extends Fragment implements OnClickListener {
 	}
 
 	private void initwidget() {
-		// TODO Auto-generated method stub
 		tableView = (UITableView) mineView.findViewById(R.id.mineitem_view);
 		icon = (ImageView) mineView.findViewById(R.id.icon);
 		name = (TextView) mineView.findViewById(R.id.name);
@@ -69,7 +67,6 @@ public class MineFragment extends Fragment implements OnClickListener {
 	}
 
 	private void initTableView() {
-		// TODO Auto-generated method stub
 		tableView.addBasicItem(R.drawable.mine_comment, "我的订单", null);
 		tableView.addBasicItem(R.drawable.mine_favorite, "我的收藏", null);
 		tableView.addBasicItem(R.drawable.mine_browse_history, "浏览历史", null);
@@ -78,7 +75,6 @@ public class MineFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		Intent i = new Intent();
 		switch (v.getId()) {
 		case R.id.mine_edit:
@@ -107,9 +103,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 	}
 
 	private void clickTableItem(int index) {
-		// TODO Auto-generated method stub
 		System.out.println("click" + index);
-//		Intent intent = new Intent();
 		switch (index) {
 		case 0:
 			// intent=new Intent(MineFragment.this.getActivity(),
@@ -123,9 +117,6 @@ public class MineFragment extends Fragment implements OnClickListener {
 			break;
 		case 2:
 			switchFragment(new HistoryFragment());
-			intent = new Intent(MineFragment.this.getActivity(),
-					HistoryActivity.class);
-			startActivity(intent);
 			break;
 		}
 
@@ -136,7 +127,7 @@ public class MineFragment extends Fragment implements OnClickListener {
 			return;
 		if (getActivity() instanceof NianPiaoActivity) {
 			NianPiaoActivity fca = (NianPiaoActivity) getActivity();
-			fca.switchContent(fragment);
+			fca.switchContent(fragment,1);
 		}
 	}
 }

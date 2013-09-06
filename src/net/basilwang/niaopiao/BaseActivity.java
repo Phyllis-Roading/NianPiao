@@ -5,18 +5,13 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-
-
-
 
 public class BaseActivity extends SlidingFragmentActivity {
 
@@ -70,36 +65,30 @@ public class BaseActivity extends SlidingFragmentActivity {
 			}
 		});
 		actionbarBack.setOnClickListener(new OnClickListener() {
-		tv_title=(TextView)findViewById(R.id.abs_title);
-		setActionbarTitle(mTitleRes);
-//		mtv.setText("sdcdsvdfs");
-
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getActionBar().setDisplayShowTitleEnabled(true);
-//		getActionBar().setBackgroundDrawable(d)
-	}
 
 			@Override
 			public void onClick(View v) {
 				getSupportFragmentManager().popBackStack();
 			}
 		});
+	}
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-//		switch (item.getItemId()) {
-//		case android.R.id.home:
-//			toggle();
-//			return true;
-//		case ActionBar.DISPLAY_USE_LOGO:
-//			toggle();
-//			return true;
-//		}
+		// switch (item.getItemId()) {
+		// case android.R.id.home:
+		// toggle();
+		// return true;
+		// case ActionBar.DISPLAY_USE_LOGO:
+		// toggle();
+		// return true;
+		// }
 		return super.onOptionsItemSelected(item);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-//		getSupportMenuInflater().inflate(R.menu.main, menu);
+		// getSupportMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
