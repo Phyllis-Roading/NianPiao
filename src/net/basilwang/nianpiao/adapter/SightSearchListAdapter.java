@@ -1,9 +1,6 @@
 package net.basilwang.nianpiao.adapter;
 
 import java.util.List;
-
-import org.w3c.dom.Text;
-
 import net.basilwang.nianpiao.model.SightListItemModel;
 import net.basilwang.niaopiao.R;
 import android.content.Context;

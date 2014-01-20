@@ -4,21 +4,42 @@
     android:layout_height="50.0dip"
     android:orientation="horizontal" >
 
-    <LinearLayout
-        android:id="@+id/abs_left"
+    <FrameLayout
         android:layout_width="50.0dip"
-        android:layout_height="fill_parent"
-        android:clickable="true"
-        android:gravity="center"
-        android:background="@drawable/btn_blue"
-        android:orientation="horizontal" >
+        android:layout_height="fill_parent" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_back"
-            android:clickable="false" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/abs_left_back"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_blue"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_back"
+                android:clickable="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/abs_left_nav"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_blue"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav"
+                android:clickable="false" />
+        </LinearLayout>
+    </FrameLayout>
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -37,12 +58,6 @@
                 android:layout_weight="1.0"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
-
-                <!-- <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="left"
-                    android:background="@drawable/divline" /> -->
 
                 <phyllis.roading.view.AlwaysFocusedTextView
                     android:id="@+id/abs_title"

@@ -1,70 +1,39 @@
 package net.basilwang.niaopiao;
 
-import android.graphics.drawable.Drawable;
+import net.basilwang.utils.NetworkUtils;
+import mayi.slidingmenudemo.SlideMenuFragment;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.Toast;
 
-import com.actionbarsherlock.app.ActionBar;
-
-
-
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 public class NianPiaoActivity extends BaseActivity {
 
-
 	private Fragment mContent;
-//	private ActionBar myActionBar;
-	
+
 	public NianPiaoActivity() {
 		super(R.string.app_name);
 	}
 
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		
-		
-//		setContentView(R.layout.activity_main);
+
+		// customize the SlidingMenu
+		SlidingMenu sm = getSlidingMenu();
+		sm.setShadowWidthRes(R.dimen.shadow_width);
+		sm.setShadowDrawable(R.drawable.shadow);
+		sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		sm.setFadeDegree(0.35f);
+		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
+
 		initSlidingMenu(savedInstanceState);
-		
-		//Ìí¼Ó×Ô¶¨ÒåµÄActionBar,»¹Î´³É¹¦
-		ActionBar.LayoutParams lp = new ActionBar.LayoutParams(
-				ActionBar.LayoutParams.MATCH_PARENT,
-				ActionBar.LayoutParams.MATCH_PARENT, Gravity.CENTER);
-		View ABTitleView=getLayoutInflater().inflate(R.layout.title_bar,
-				null);
-		ActionBar actionBar=getSupportActionBar();
-		actionBar.setCustomView(ABTitleView,lp);
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		actionBar.setDisplayShowCustomEnabled(true);
-		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);
-		actionBar.setBackgroundDrawable(d);
-		
-		
-//		Drawable d=(Drawable)getResources().getDrawable(R.drawable.titlebar_whole);
-//		ActionBar actionbar=getSupportActionBar();
-//		actionbar.setBackgroundDrawable(d);
-//		actionbar.setLogo(R.drawable.btn_back);
-//		actionbar.setDisplayShowHomeEnabled(true);
-//		actionbar.setHomeButtonEnabled(true);
-		
-		
-		View view = (View)findViewById(R.id.abs_left);
-		view.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				toggle();
-			}
-		});
-		
+		checkNetwork();
 	}
 
 	private void initSlidingMenu(Bundle savedInstanceState) {
@@ -73,43 +42,42 @@ public class NianPiaoActivity extends BaseActivity {
 					savedInstanceState, "mContent");
 		if (mContent == null)
 			mContent = new sightSearchFragment();
-
-		//ÉèÖÃÄÚÈİÊÔÍ¼
+		// è®¾ç½®å†…å®¹è§†å›¾
 		setContentView(R.layout.content_frame);
 		getSupportFragmentManager().beginTransaction()
-			.replace(R.id.content_frame, mContent).commit();
-		// ÉèÖÃ»¬¶¯²Ëµ¥µÄÊÓÍ¼
+				.replace(R.id.content_frame, mContent).commit();
+		// è®¾ç½®æ»‘åŠ¨èœå•è§†å›¾
 		setBehindContentView(R.layout.menu_frame);
 		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.menu_frame, new LeftBottomFragment()).commit();
-		
-	}
-	
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		switch (item.getItemId()) {
-////		case R.id.abs_left:
-////			toggle();
-////			break;
-//
-//		default:
-//			break;
-//		}
-//		return super.onOptionsItemSelected(item);
-//	}
+				.replace(R.id.menu_frame, new SlideMenuFragment()).commit();
 
+	}
 
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		getSupportFragmentManager().putFragment(outState, "mContent", mContent);
 	}
-	
-	public void switchContent(Fragment fragment) {
+
+	public void switchContent(Fragment fragment, int flag) {
 		mContent = fragment;
-		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.content_frame, fragment).commit();
+		if (flag == 1) {
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.content_frame, mContent).addToBackStack(null)
+					.commit();
+		} else {
+			// å¦‚æœFragmentæ˜¯ç”±æ»‘åŠ¨èœå•åˆ‡æ¢çš„ï¼Œåˆ™å°†BackStackæ¸…ç©º
+			getSupportFragmentManager().popBackStack(null,
+					FragmentManager.POP_BACK_STACK_INCLUSIVE);
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.content_frame, fragment).commit();
+		}
 		getSlidingMenu().showContent();
+	}
+
+	private void checkNetwork() {
+		if (!NetworkUtils.isConnect(this))
+			Toast.makeText(this, "è¯·æ£€æŸ¥ç½‘ç»œæ˜¯å¦è¿æ¥", Toast.LENGTH_LONG).show();
 	}
 
 }

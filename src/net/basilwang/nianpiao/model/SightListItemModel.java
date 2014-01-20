@@ -1,27 +1,32 @@
 package net.basilwang.nianpiao.model;
 
 public class SightListItemModel {
-	
+
 	private Integer id;
 	private String title;
 	private String level;
 	private String price;
 	private String discount;
 	private String distance;
+	private String openTime;
+	private String address;
+	private String introduce;
 
-	public SightListItemModel(){
+	public SightListItemModel() {
 		super();
 	}
-	
-	public SightListItemModel(Integer id,String title,String level,String price,String discount,String distance)
-	{
+
+	public SightListItemModel(Integer id, String title, String level,
+			String price, String discount, String distance,String opentime) {
 		super();
-		this.id=id;
-		this.title=title;
-		this.level=level;
-		this.price=price;
-		this.discount=discount;
-		this.distance=distance;
+		this.id = id;
+		this.title = title;
+		this.level = level;
+		this.price = price;
+		this.discount = discount;
+		this.distance = distance;
+		this.openTime=opentime;
+
 	}
 
 	public Integer getId() {
@@ -71,6 +76,29 @@ public class SightListItemModel {
 	public void setDistance(String distance) {
 		this.distance = distance;
 	}
-	
-	
+
+	public String getOpenTime() {
+		return openTime;
+	}
+
+	public void setOpenTime(String openTime) {
+		this.openTime = openTime;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getIntroduce() {
+		return introduce;
+	}
+
+	public void setIntroduce(String introduce) {
+		this.introduce = introduce;
+	}
+
 }

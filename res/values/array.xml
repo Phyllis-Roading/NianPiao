@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="list_items">
+    <string-array name="menu_items">
         <item>景点查询</item>
         <item>购买年票</item>
         <item>攻略路线</item>
@@ -47,6 +47,13 @@
         <item>燕山立交桥二环东路</item>
         <item>燕山立交桥二环东路</item>
         <item>燕山立交桥二环东路</item>
+    </string-array>
+    
+    <string-array name="sight_list_item_opentime">
+        <item>7:00-20:00</item>
+        <item>7:00-20:00</item>
+        <item>7:00-20:00</item>
+        <item>7:00-20:00</item>
     </string-array>
 
 </resources>
